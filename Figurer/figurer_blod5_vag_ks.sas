@@ -1,4 +1,9 @@
 
+/* Gjelder alle figurer */
+%let just=Ijust;
+%let fignavn=&just;
+%let tittel=&tema_navn &just;
+
 %let tema=blod5;
 %let agg_var=blodning;
 %let nevner=alle;  
@@ -23,9 +28,6 @@
 %let skala=;
 
 
-%let just=Ijust;
-%let fignavn=&just;
-%let tittel=&tema_navn &just;
 
 
 %let mappe=&mappe_png;

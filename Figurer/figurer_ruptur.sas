@@ -19,8 +19,8 @@
 %let tabellvar1=&tema_navn;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="&tema" &tabellvar2="vaginale førstegangsfødsler";
-%let xlabel=&tema., pr. 1 000  vaginale førstegangsfødsler.;
+%let labeltabell=&tabellvar1="Ruptur gr. 3/4" &tabellvar2="Fødsler";
+%let xlabel=Antall pr. 1 000  vaginale førstegangsfødende med vaginal forløsning.;
 %let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
 %let skala=;
 
@@ -49,8 +49,8 @@
 %let tabellvar1=&tema_navn;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="&tema" &tabellvar2="vaginale flergangsfødsler";
-%let xlabel=&tema., pr. 1 000  vaginale flergangsfødsler.;
+%let labeltabell=&tabellvar1="Ruptur gr. 3/4" &tabellvar2="Fødsler";
+%let xlabel=Antall pr. 1 000  vaginale flergangsfødende med vaginal forløsning.;
 %let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
 %let skala=;
 
@@ -66,7 +66,8 @@
 %ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
 
 
-
+%let mappe_png=Figurer\png\ROBSON;
+%let mappe_pdf=Figurer\pdf\ROBSON;
 
 /*****************/
 /*** ROBSON  1 ***/
@@ -82,8 +83,8 @@
 %let tabellvar1=&tema_navn;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="&tema" &tabellvar2="vaginale førstegangsfødsler";
-%let xlabel=&tema., pr. 1 000  vaginale førstegangsfødsler spontan.;
+%let labeltabell=&tabellvar1="&tema" &tabellvar2="vaginale førstegangsfødende";
+%let xlabel=&tema., pr. 1 000  vaginale førstegangsfødende spontan.;
 %let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
 %let skala=;
 
@@ -111,8 +112,8 @@
 %let tabellvar1=&tema_navn;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="&tema" &tabellvar2="vaginale førstegangsfødsler";
-%let xlabel=&tema., pr. 1 000  vaginale førstegangsfødsler igangsatt.;
+%let labeltabell=&tabellvar1="&tema" &tabellvar2="vaginale førstegangsfødende";
+%let xlabel=&tema., pr. 1 000  vaginale førstegangsfødende igangsatt.;
 %let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
 %let skala=;
 
@@ -139,8 +140,8 @@
 %let tabellvar1=&tema_navn;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="&tema" &tabellvar2="vaginale flergangsfødsler";
-%let xlabel=&tema., pr. 1 000  vaginale flergangsfødsler spontan.;
+%let labeltabell=&tabellvar1="&tema" &tabellvar2="vaginale flergangsfødende";
+%let xlabel=&tema., pr. 1 000  vaginale flergangsfødende spontan.;
 %let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
 %let skala=;
 
@@ -168,8 +169,8 @@
 %let tabellvar1=&tema_navn;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="&tema" &tabellvar2="vaginale flergangsfødsler";
-%let xlabel=&tema., pr. 1 000  vaginale flergangsfødsler igangsatt.;
+%let labeltabell=&tabellvar1="&tema" &tabellvar2="vaginale flergangsfødende";
+%let xlabel=&tema., pr. 1 000  vaginale flergangsfødende igangsatt.;
 %let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
 %let skala=;
 
@@ -199,3 +200,5 @@
 %ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017);
 */
 
+%let mappe_png=Figurer\png;
+%let mappe_pdf=Figurer\pdf;

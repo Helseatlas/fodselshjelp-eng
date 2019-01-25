@@ -1,8 +1,7 @@
 /* Global variables */
-%let tema=ks_planlagt;
-%let agg_var=ks_planlagt;
+%let tema=ukompl;
+%let agg_var=ukompl;
 %let nevner=alle;
-
 
 
 /* Figurer */
@@ -20,8 +19,8 @@
 %let tabellvar1=&tema_navn;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="Keisersnitt" &tabellvar2="Fødsler";
-%let xlabel=Antall pr. 1 000  førstegangsfødende.;
+%let labeltabell=&tabellvar1="Ukomplisert" &tabellvar2="Fødsler";
+%let xlabel=&tema., pr. 1 000  førstegangsfødende.;
 %let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
 %let skala=;
 
@@ -51,8 +50,8 @@
 %let tabellvar1=&tema_navn;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="Keisersnitt" &tabellvar2="Fødsler";
-%let xlabel=Antall pr. 1 000  flergangsfødende.;
+%let labeltabell=&tabellvar1="Ukomplisert" &tabellvar2="Fødsler";
+%let xlabel=&tema., pr. 1 000  flergangsfødende.;
 %let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
 %let skala=;
 

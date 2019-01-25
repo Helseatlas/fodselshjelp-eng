@@ -25,7 +25,7 @@
 %let tabellvar1=&tema_navn.&nevner;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="&tema" &tabellvar2="vag førstegangsfødende";
+%let labeltabell=&tabellvar1="Liggetid" &tabellvar2="Fødsler";
 %let xlabel=Antall liggedøgn pr. fødsel.;
 %let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
 %let skala=;
@@ -51,7 +51,7 @@
 %let tabellvar1=&tema_navn.&nevner;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="&tema" &tabellvar2="vag flergangsfødende";
+%let labeltabell=&tabellvar1="Liggetid" &tabellvar2="Fødsler";
 %let xlabel=Antall liggedøgn pr. fødsel.;
 %let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
 %let skala=;
@@ -87,7 +87,7 @@
 %let tabellvar1=&tema_navn.&nevner;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="&tema" &tabellvar2="ks, førstegangsfødende";
+%let labeltabell=&tabellvar1="Liggetid" &tabellvar2="Fødsler";
 %let xlabel=Antall liggedøgn pr. fødsel.;
 %let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
 %let skala=;
@@ -113,7 +113,7 @@
 %let tabellvar1=&tema_navn.&nevner;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="&tema" &tabellvar2="ks, flergangsfødende";
+%let labeltabell=&tabellvar1="Liggetid" &tabellvar2="Fødsler";
 %let xlabel=Antall liggedøgn pr. fødsel.;
 %let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
 %let skala=;

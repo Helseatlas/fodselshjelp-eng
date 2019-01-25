@@ -20,8 +20,8 @@
 %let tabellvar1=&tema_navn;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="&tema" &tabellvar2="vag førstegangsfødsler";
-%let xlabel=Antall pr. 1 000  førstegangsfødsler.;
+%let labeltabell=&tabellvar1="Instr. forl." &tabellvar2="Fødsler";
+%let xlabel=Antall pr. 1 000  førstegangsfødende med vaginal forløsning.;
 %let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
 %let skala=;
 
@@ -46,8 +46,8 @@
 %let tabellvar1=&tema_navn;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="&tema" &tabellvar2="vag flergangsfødsler";
-%let xlabel=Antall pr. 1 000  flergangsfødsler.;
+%let labeltabell=&tabellvar1="Instr. forl." &tabellvar2="Fødsler";
+%let xlabel=Antall pr. 1 000  flergangsfødende med vaginal forløsning.;
 %let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
 %let skala=;
 
@@ -56,6 +56,9 @@
 
 %let mappe=&mappe_pdf;
 %ratefig(datasett=&tema_navn._IJUST_bohf, bildeformat=pdf);
+
+%let mappe_png=Figurer\png\ROBSON;
+%let mappe_pdf=Figurer\pdf\ROBSON;
 
 /*****************/
 /*** ROBSON 1 ***/
@@ -72,8 +75,8 @@
 %let tabellvar1=&tema_navn;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="&tema" &tabellvar2="vag førstegangsfødsler";
-%let xlabel=Antall pr. 1 000  førstegangsfødsler.;
+%let labeltabell=&tabellvar1="&tema" &tabellvar2="vag førstegangsfødende";
+%let xlabel=Antall pr. 1 000  førstegangsfødende.;
 %let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
 %let skala=;
 
@@ -98,8 +101,8 @@
 %let tabellvar1=&tema_navn;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="&tema" &tabellvar2="vag førstegangsfødsler";
-%let xlabel=Antall pr. 1 000  førstegangsfødsler.;
+%let labeltabell=&tabellvar1="&tema" &tabellvar2="vag førstegangsfødende";
+%let xlabel=Antall pr. 1 000  førstegangsfødende.;
 %let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
 %let skala=;
 
@@ -123,8 +126,8 @@
 %let tabellvar1=&tema_navn;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="&tema" &tabellvar2="vag flergangsfødsler";
-%let xlabel=Antall pr. 1 000  flergangsfødsler.;
+%let labeltabell=&tabellvar1="&tema" &tabellvar2="vag flergangsfødende";
+%let xlabel=Antall pr. 1 000  flergangsfødende.;
 %let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
 %let skala=;
 
@@ -149,8 +152,8 @@
 %let tabellvar1=&tema_navn;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="&tema" &tabellvar2="vag flergangsfødsler";
-%let xlabel=Antall pr. 1 000  flergangsfødsler.;
+%let labeltabell=&tabellvar1="&tema" &tabellvar2="vag flergangsfødende";
+%let xlabel=Antall pr. 1 000  flergangsfødende.;
 %let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
 %let skala=;
 
@@ -176,7 +179,7 @@
 %let fignavn=;
 %let type=p0;
 %let tittel=;
-%let xlabel=Antall pr. 1 000  førstegangsfødsler.;
+%let xlabel=Antall pr. 1 000  førstegangsfødende.;
 %let label_1=Vakuum;
 %let label_2=Tang;
 %let tabellvar1=tot_antall;
@@ -207,7 +210,7 @@
 %let fignavn=;
 %let type=p1;
 %let tittel=;
-%let xlabel=Antall pr. 1 000  flergangsfødsler.;
+%let xlabel=Antall pr. 1 000  flergangsfødende.;
 %let label_1=Vakuum;
 %let label_2=Tang;
 %let tabellvar1=tot_antall;
@@ -225,3 +228,5 @@
 %ratefig_todeltSoyle(datasett=&tema._delt_p1_bohf, bildeformat=pdf );
 
 
+%let mappe_png=Figurer\png;
+%let mappe_pdf=Figurer\pdf;

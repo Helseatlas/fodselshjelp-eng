@@ -13,7 +13,16 @@ data FH_&tema._&par_rob.&grp.;
   set helseatl.FH_&tema._&par_rob.;
 
   *keep the desired group, i.e. par0, par1, rob1, rob2, rob3, rob4, or rob9;
-  where &par_rob=&grp;
+
+  %if &nevner=vag %then %do;
+    if forlosning=1 and &par_rob=&grp then output;
+  %end;
+  %else %if &nevner=ks %then %do;
+    if forlosning=2 and &par_rob=&grp then output;
+  %end;
+  %else %if &nevner=alle %then %do;
+    if                  &par_rob=&grp then output;
+  %end;
 
 run;
 
