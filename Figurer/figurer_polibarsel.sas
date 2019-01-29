@@ -64,3 +64,91 @@
 
 
 
+/*SAMMENSATT FIGUR, NPR + KUHR, KONTAKTER*/
+
+%let dsn1=helseatl.FH_kuhr_barsel_r;
+%let rv1=Kontakter;
+
+%let dsn2=barselkont_tot_bohf;
+%let rv2=barselkont_tot;
+
+
+%merge(ant_datasett=2, dsn_ut=&tema._NPR_KUHR_bohf); 
+
+
+%let vis_aarsvar_todelt=0;
+
+%let fignavn=NPR_KUHR;
+%let type=kons;
+%let tittel=;
+%let xlabel=Antall kontakter pr. 1000 fødsler.;
+%let label_1=Fastlege/legevakt (FL/LV);
+%let label_2=Spesialisthelsetj. (SH);
+%let tabellvar1=antall_1;
+%let tabellvar2=antall_2;
+%let tabellvariable= &tabellvar1 &tabellvar2;
+%let labeltabell=&tabellvar1="FL/LV" &tabellvar2="SH" ;
+%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let skala=;
+
+%let mappe=&mappe_png;
+%ratefig_todeltSoyle(datasett=&tema._NPR_KUHR_bohf, legendplace=location=outside position=bottom down=1);
+
+
+%let mappe=&mappe_pdf;
+%ratefig_todeltSoyle(datasett=&tema._NPR_KUHR_bohf, bildeformat=pdf , legendplace=location=outside position=bottom down=1);
+
+
+%let vis_aarsvar_todelt=1;
+
+
+/*SAMMENSATT FIGUR, NPR + KUHR, PASIENTER*/
+
+%let dsn1=helseatl.FH_kuhr_barsel_rp;
+%let rv1=Pasienter;
+
+%let dsn2=barselkont_tu_bohf;
+%let rv2=barselkont_tu;
+
+%let dsn3=helseatl.FH_kuhr_barsel_r;
+%let rv3=Kontakter;
+
+%let dsn4=barselkont_tot_bohf;
+%let rv4=barselkont_tot;
+
+
+%merge(ant_datasett=4, dsn_ut=&tema._NPR_KUHR_p_bohf); 
+
+data &tema._NPR_KUHR_p_bohf2;
+set &tema._NPR_KUHR_p_bohf;
+
+tot_kont=rate_3+rate_4;
+tot_pers=rate_1+rate_2;
+k_pr_prs=tot_kont/tot_pers;
+
+run;
+
+%let vis_aarsvar_todelt=0;
+
+%let fignavn=NPR_KUHR;
+%let type=pas;
+%let tittel=;
+%let xlabel=Antall fødende til fastlege/legevakt eller poliklinisk konsultasjon pr. 1000 fødsler.;
+%let label_1=Fastlege/legevakt;
+%let label_2=Spesialisthelsetj.;
+%let tabellvar1=tot_antall;
+%let tabellvar2=k_pr_prs;
+%let tabellvariable= &tabellvar1 &tabellvar2;
+%let labeltabell=&tabellvar1="Kontakter" &tabellvar2="Kont. pr. pas." ;
+%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.1;
+%let skala=;
+
+%let mappe=&mappe_png;
+%ratefig_todeltSoyle(datasett=&tema._NPR_KUHR_p_bohf2, legendplace=location=outside position=bottom down=1);
+
+
+%let mappe=&mappe_pdf;
+%ratefig_todeltSoyle(datasett=&tema._NPR_KUHR_p_bohf2, bildeformat=pdf , legendplace=location=outside position=bottom down=1);
+
+
+%let vis_aarsvar_todelt=1;
