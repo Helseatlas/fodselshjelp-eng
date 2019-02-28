@@ -75,7 +75,7 @@ data &dsn;
 set &dsn;
 by pid descending EoC_inndato descending fodedato;
 
-if dager_for_fodsel ne . then do;
+if dager_for_fodsel not in (0,.) then do;
 /*Tar med alle kontakter fom: fødselsdato - &sv_lengde. Tar ikke med kontroller som er en del av et døgnopphold.*/	
 	if EoC_aktivitetskategori3 ne 1 and dager_for_fodsel le &sv_lengde then svkontakt=1;
 end;
@@ -95,8 +95,9 @@ run;
 /*Teller antall kontakter i hvert svangerskap*/
 proc sql;
    create table &dsn._allekont as 
-   select distinct pid, fodedato, fodealder, fodekomnr, fodebydel, SUM(svkontakt) as ant_svkontakt
+   select distinct pid, fodedato, fodealder, fodekomnr, fodebydel,count(distinct EoC_Id) as ant_svkontakt
    from &dsn._utvalg
+   where svkontakt=1
    group by pid, fodedato;
 quit;
 

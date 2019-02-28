@@ -41,7 +41,6 @@ end;
 
 /*Bruker if ... else for å utelukke at kontakter kategoriseres som både normal og høyrisiko, både høyrisiko og o-diagnose etc.*/
 if z35=1 then Kontroll_hoyrisk=1;
-
 else if O_diag=1 and EoC_aktivitetskategori3 ne 1 then Kontroll_Odiag=1;		/*Tar bare med Poli og Dag for O-diagnoser*/
 else if Z36=1 then Kontroll_prenatal=1;
 else if Z34=1 then Kontroll_normal=1;
