@@ -5,11 +5,12 @@ data &dsn;
 set kontakter_fodende;
 if &ftype=1 then do;
 fodedato=EoC_inndato;
+fodeUTdato=EoC_utdato;
 fodealder=alder;
 fodekomnr=komnr;
 fodebydel=bydel;
 end;
-format fodedato date10.;
+format fodedato fodeUTdato date10.;
 run;
 
 /*Sorterer slik at fødselen kommer før/over tilhørende kontakter i barseltid*/
@@ -19,12 +20,13 @@ run;
 
 /*Kopierer dato for fødsel (fodedato) +++ til alle kontakter under helt til man kommer til en ny fødsel eller en ny PID*/
 /*Alle kontakter som ikke følger en fødsel vil få fodedato+++ lik missing*/
-data &dsn(drop = tmp_fodedato tmp_fodealder tmp_fodekomnr tmp_fodebydel);
+data &dsn(drop = tmp_fodedato tmp_fodeUTdato tmp_fodealder tmp_fodekomnr tmp_fodebydel);
 set &dsn;
 by pid EoC_inndato fodedato;
 
 if &ftype=1 then do;
 	tmp_fodedato = fodedato;
+	tmp_fodeUTdato = fodeUTdato;
 	tmp_fodealder = fodealder;
 	tmp_fodekomnr = fodekomnr;
 	tmp_fodebydel = fodebydel;
@@ -33,16 +35,19 @@ else do;
 	if tmp_fodedato ne . then do;
 		if first.pid then do;
 			tmp_fodedato = fodedato;
+			tmp_fodeUTdato = fodeUTdato;
 			tmp_fodealder = fodealder;
 			tmp_fodekomnr = fodekomnr;
 			tmp_fodebydel = fodebydel;
 		end;
 		else do;
 			fodedato = tmp_fodedato;
+			fodeUTdato = tmp_fodeUTdato;
 			fodealder = tmp_fodealder;
 			fodekomnr= tmp_fodekomnr;
 			fodebydel = tmp_fodebydel;
 			tmp_fodedato = fodedato;
+			tmp_fodeUTdato = fodeUTdato;
 			tmp_fodealder = fodealder;
 			tmp_fodekomnr = fodekomnr;
 			tmp_fodebydel = fodebydel;
@@ -50,13 +55,14 @@ else do;
 	end;
 	else do;
 		tmp_fodedato = fodedato;
+		tmp_fodeUTdato = fodeUTdato;
 		tmp_fodealder = fodealder;
 		tmp_fodekomnr = fodekomnr;
 		tmp_fodebydel = fodebydel;
 	end;
 end;	
 
-retain tmp_fodedato	tmp_fodealder tmp_fodekomnr tmp_fodebydel;
+retain tmp_fodedato	tmp_fodeUTdato tmp_fodealder tmp_fodekomnr tmp_fodebydel;
 
 
 run;
@@ -100,8 +106,18 @@ set &dsn;
 
 if Levende_fodt=. and fodedato ne . then do;			/*Sikrer at vi ikke tar med selve fødselen*/
 	dager_etter_fodsel = EoC_inndato - fodedato;
-	if dager_etter_fodsel ge 1 and dager_etter_fodsel le 42 and EoC_liggetid=0 then barselkont=1;		/*Kun opphold fom dagen etter inndato for fødselsoppholdet telles med, tar bare med opphold med liggetid=0*/
-	if dager_etter_fodsel ge 1 and dager_etter_fodsel le 7 and EoC_liggetid=0 then barselkont7d=1;
+	dager_etter_UT = EoC_inndato - fodeUTdato;
+
+	/*Kun opphold fom dagen etter utdato for fødselsoppholdet telles med, baselkont tar bare med opphold med liggetid=0*/
+	/*
+	if dager_etter_UT ge 1 and dager_etter_fodsel le 42 and EoC_liggetid = 0 then barselkont=1;		
+	if dager_etter_UT ge 1 and dager_etter_fodsel le 42 and EoC_liggetid ne 0 then barseldogn=1;
+	if dager_etter_UT ge 1 and dager_etter_UT le  7 and EoC_liggetid = 0 then barselkont7d=1;	
+	*/
+	if dager_etter_UT ge 1 and dager_etter_UT le 42 and EoC_liggetid = 0 then barselkont=1;		
+	if dager_etter_UT ge 1 and dager_etter_UT le 42 and EoC_liggetid > 0 then barseldogn=1;
+	if dager_etter_UT ge 1 and dager_etter_UT le  7 and EoC_liggetid = 0 then barselkont7d=1;
+	
 end;
 
 run;
