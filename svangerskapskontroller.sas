@@ -77,7 +77,12 @@ by pid descending EoC_inndato descending fodedato;
 
 if dager_for_fodsel not in (0,.) then do;
 /*Tar med alle kontakter fom: fødselsdato - &sv_lengde. Tar ikke med kontroller som er en del av et døgnopphold.*/	
-	if EoC_aktivitetskategori3 ne 1 and dager_for_fodsel le &sv_lengde then svkontakt=1;
+	if EoC_aktivitetskategori3 ne 1 and dager_for_fodsel le &sv_lengde then  do ;
+	  if Kontroll=1 or UL=1 then do;
+	    svkontakt_kontr=1;
+	    svkontakt=1;
+	  end;
+	end;
 end;
 
 
@@ -95,12 +100,39 @@ run;
 /*Teller antall kontakter i hvert svangerskap*/
 proc sql;
    create table &dsn._allekont as 
-   select distinct pid, fodedato, fodealder, fodekomnr, fodebydel,count(distinct EoC_Id) as ant_svkontakt
+   select distinct pid, fodedato, fodealder, fodekomnr, fodebydel, count(distinct EoC_Id) as ant_svkontakt
    from &dsn._utvalg
-   where svkontakt=1
+   /*if only counting pregnancy related codes then change svkontakt to svkontakt_kontr here;*/
+   where svkontakt_kontr=1
    group by pid, fodedato;
 quit;
 
+data &dsn._allekont_kat;
+set &dsn._allekont;
+if ant_svkontakt = 1 then en_kont=1;
+else if ant_svkontakt gt 1 and ant_svkontakt le 5 then to_fem_kont=1;
+else if ant_svkontakt gt 5 then mer_fem_kont=1;
+aar=year(fodedato);	
+run;
+
+/*Teller antall fødsler og antal med hhv. 1 kontakt, 2-5 kontaker og mer enn 5 kontakter*/
+proc sql;
+   create table &dsn._andel as 
+   select distinct aar, fodealder, fodekomnr, fodebydel, SUM(en_kont) as en_kontakt, SUM(to_fem_kont) as to_fem_kontakter, SUM(mer_fem_kont) as mer_fem_kontakter
+   from &dsn._allekont_kat
+   group by aar,fodealder, fodekomnr, fodebydel;
+quit;
+
+data &dsn._andel_agg;
+set &dsn._andel;
+rename fodealder=alder;
+rename fodekomnr=komnr;
+rename fodebydel=bydel;
+run;
+
+data helseatl.FH_svkont_andel;
+set &dsn._andel_agg;
+run;
 
 /*Teller antall fødsler og lagrer til innbyggerfil.*/
 proc sql;

@@ -10,7 +10,7 @@ array diagnose {*} Hdiag: Bdiag: Tdiag:;
      if substr(diagnose{i},1,3) in ('Z34') then Z34=1;/*Kontroll av normalt svangerskap*/
 	   if substr(diagnose{i},1,3) in ('Z35') then Z35=1;/*Kontroll av høyrisikosvangerskap*/
 		 if substr(diagnose{i},1,3) in ('Z36') then Z36=1;/*Prenatal diagnostikk*/
-		 if substr(diagnose{i},1,2) in ('O1','O2','O3','O4') then O_diag=1;
+		 if substr(diagnose{i},1,2) in ('O1','O2','O3','O4','O6') then O_diag=1;
 		 if substr(diagnose{i},1,3) in ('O98','O99') then O_diag=1;
      end;
 
@@ -48,8 +48,8 @@ else if Z32=1 or Z33=1 then Graviditet=1;
 
 /*Hvis ingen av tilstandskodene tilsier svangerskapskontroll, 
 men kontrollen har takst for svangerskapskontroll så kategoriseres den som Kontroll_hoyrisk eller Kontroll_Odiag*/
-else if Takst211a=1 or Takst211b=1 or Takst216=1 then Kontroll_Odiag=1;
 else if Takst211e=1 or Takst217a=1 or Takst217b=1 or Takst217c=1 or Takst217d=1 then Kontroll_hoyrisk=1;
+else if Takst211a=1 or Takst211b=1 or Takst216=1 then Kontroll_Odiag=1;
 
 
 if Kontroll_normal=1 or Kontroll_hoyrisk=1 or Kontroll_Odiag=1 or Kontroll_prenatal=1 or Graviditet=1 then Kontroll=1;
