@@ -23,9 +23,9 @@
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1=">1500 ml" &tabellvar2="Fødsler";
-%let xlabel=Antall pr. 1 000 førstegangsfødende med vaginal forløsning.;
+%let xlabel=Antall pr. 1 000 førstegangsfødende som fødte vaginalt.;
 %let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
-%let skala=;
+%let skala=values=(0 to 60 by 10);
 
 %let just=Ijust;
 %let fignavn=&just;
@@ -53,9 +53,9 @@
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1=">1500 ml" &tabellvar2="Fødsler";
-%let xlabel=Antall pr. 1 000 flergangsfødende med vaginal forløsning.;
+%let xlabel=Antall pr. 1 000 flergangsfødende som fødte vaginalt.;
 %let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
-%let skala=;
+%let skala=values=(0 to 60 by 10);
 
 
 %let just=Ijust;
