@@ -34,7 +34,21 @@
 %let mappe=&mappe_pdf;
 %ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
 
+/*** Lager datasett for Instant Atlas *****/
 
+/*ks_planlagt_p0*/
+%Let beskrivelse=ks_planlagt_p0_rate;
+data helseatl.IA_FH_&beskrivelse;
+  set &tema_navn._&just._bohf (keep = bohf rateSnitt &tema_navn innbyggere rename=(rateSnitt=Rate &tema_navn=Antall)); 
+
+BoHF_Navn=vvalue(BoHF);
+Gruppe = 2;
+Niva =23;
+
+numeric = "numeric";
+Tom_rad = "";
+Tom_rute = "";
+run;
 
 
 /*****************/
@@ -67,6 +81,20 @@
 %let mappe=&mappe_pdf;
 %ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
 
+/*** Lager datasett for Instant Atlas *****/
 
+/*ks_planlagt_p1*/
+%Let beskrivelse=ks_planlagt_p1_rate;
+data helseatl.IA_FH_&beskrivelse;
+  set &tema_navn._&just._bohf (keep = bohf rateSnitt &tema_navn innbyggere rename=(rateSnitt=Rate &tema_navn=Antall)); 
+
+BoHF_Navn=vvalue(BoHF);
+Gruppe = 2;
+Niva =24;
+
+numeric = "numeric";
+Tom_rad = "";
+Tom_rute = "";
+run;
 
 

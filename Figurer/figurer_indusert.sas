@@ -1,5 +1,5 @@
 /* Global variables */
-%let tema=indusert;
+%let tema=Indusert;
 %let agg_var=ind;
 %let nevner=alle;
 
@@ -22,7 +22,7 @@
 %let labeltabell=&tabellvar1="Indusert" &tabellvar2="Fødsler";
 %let xlabel=&tema., pr. 1 000  førstegangsfødende.;
 %let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
-%let skala=values=(0 to 300 by 50);
+%let skala=;*values=(0 to 300 by 50);
 
 %let just=Ijust;
 %let fignavn=&just;
@@ -67,7 +67,7 @@ run;
 %let labeltabell=&tabellvar1="Indusert" &tabellvar2="Fødsler";
 %let xlabel=&tema., pr. 1 000  flergangsfødende.;
 %let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
-%let skala=values=(0 to 300 by 50);
+%let skala=;*values=(0 to 300 by 50);
 
 
 %let just=Ijust;

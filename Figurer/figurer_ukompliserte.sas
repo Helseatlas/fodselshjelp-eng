@@ -20,7 +20,7 @@
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Ukomplisert" &tabellvar2="Fødsler";
-%let xlabel=&tema., pr. 1 000  førstegangsfødende.;
+%let xlabel=Antall pr. 1 000 fødsler hos førstegangsfødende.;
 %let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
 %let skala=;
 
@@ -33,7 +33,21 @@
 %let mappe=&mappe_pdf;
 %ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
 
+/*** Lager datasett for Instant Atlas *****/
 
+/*Ukompl_p0*/
+%Let beskrivelse=ukompl_p0_rate;
+data helseatl.IA_FH_&beskrivelse;
+  set &tema_navn._&just._bohf (keep = bohf rateSnitt &tema_navn innbyggere rename=(rateSnitt=Rate &tema_navn=Antall)); 
+
+BoHF_Navn=vvalue(BoHF);
+Gruppe = 2;
+Niva =14;
+
+numeric = "numeric";
+Tom_rad = "";
+Tom_rute = "";
+run;
 
 
 /*****************/
@@ -51,9 +65,9 @@
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Ukomplisert" &tabellvar2="Fødsler";
-%let xlabel=&tema., pr. 1 000  flergangsfødende.;
+%let xlabel=Antall pr. 1 000 fødsler hos flergangsfødende.;
 %let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
-%let skala=;
+%let skala=values=(0 to 900 by 150);
 
 
 %let just=Ijust;
@@ -66,6 +80,20 @@
 %let mappe=&mappe_pdf;
 %ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
 
+/*** Lager datasett for Instant Atlas *****/
 
+/*Ukompl_p1*/
+%Let beskrivelse=ukompl_p1_rate;
+data helseatl.IA_FH_&beskrivelse;
+  set &tema_navn._&just._bohf (keep = bohf rateSnitt &tema_navn innbyggere rename=(rateSnitt=Rate &tema_navn=Antall)); 
+
+BoHF_Navn=vvalue(BoHF);
+Gruppe = 2;
+Niva =15;
+
+numeric = "numeric";
+Tom_rad = "";
+Tom_rute = "";
+run;
 
 

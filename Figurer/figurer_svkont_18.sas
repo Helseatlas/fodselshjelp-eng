@@ -305,7 +305,7 @@ run;
 /*Spesialisthelsetjenesten*/
 %Let beskrivelse=spes_rate;
 data helseatl.IA_FH_&beskrivelse;
-  set svkontakt_tot1k_ijust_bohf (keep = bohf rateSnitt svkontakt_tot1k innbyggere rename=(rateSnitt=Rate svkontakt_tot1k=Antall)); 
+  set svkontakt_tot_ijust_bohf (keep = bohf rateSnitt svkontakt_tot innbyggere rename=(rateSnitt=Rate svkontakt_tot=Antall)); 
 
 BoHF_Navn=vvalue(BoHF);
 Gruppe = 2;
@@ -328,6 +328,8 @@ Niva =8;
 numeric = "numeric";
 Tom_rad = "";
 Tom_rute = "";
+
+Rate=Rate/1000;
 run;
 
 /*Jordmor*/
@@ -342,5 +344,7 @@ Niva =7;
 numeric = "numeric";
 Tom_rad = "";
 Tom_rute = "";
+
+Rate=Rate/1000;
 run;
 

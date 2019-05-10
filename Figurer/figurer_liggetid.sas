@@ -22,12 +22,12 @@
 %let tittel=;
 %let rv1=&tema_navn.&nevner;
 %let type=&par_rob.&grp; 
-%let tabellvar1=&tema_navn.&nevner;
+%let tabellvar1=RateSnitt;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="Liggetid" &tabellvar2="Fødsler";
+%let labeltabell=&tabellvar1="Liggedøgn" &tabellvar2="Fødsler";
 %let xlabel=Antall liggedøgn pr. fødsel.;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 NLnum8.1 &tabellvar2 NLnum8.0;
 %let skala=;
 
 %let mappe=&mappe_png;
@@ -35,6 +35,22 @@
 
 %let mappe=&mappe_pdf;
 %ratefig(datasett=&tema_navn.&nevner._IJUST_BOHF, bildeformat=pdf);
+
+/*** Lager datasett for Instant Atlas *****/
+
+/*liggetid_vag_p0*/
+%Let beskrivelse=liggetid_vag_p0_rate;
+data helseatl.IA_FH_&beskrivelse;
+  set &tema_navn.&nevner._IJUST_BOHF (keep = bohf rateSnitt &tema_navn.&nevner innbyggere rename=(rateSnitt=Rate &tema_navn.&nevner=Antall)); 
+
+BoHF_Navn=vvalue(BoHF);
+Gruppe = 2;
+Niva =31;
+
+numeric = "numeric";
+Tom_rad = "";
+Tom_rute = "";
+run;
 
 /*****************/
 /*** PARITET 1 ***/
@@ -48,12 +64,12 @@
 %let tittel=;
 %let rv1=&tema_navn.&nevner;
 %let type=&par_rob.&grp; 
-%let tabellvar1=&tema_navn.&nevner;
+%let tabellvar1=RateSnitt;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="Liggetid" &tabellvar2="Fødsler";
+%let labeltabell=&tabellvar1="Liggedøgn" &tabellvar2="Fødsler";
 %let xlabel=Antall liggedøgn pr. fødsel.;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 NLnum8.1 &tabellvar2 NLnum8.0;
 %let skala=;
 
 
@@ -62,6 +78,22 @@
 
 %let mappe=&mappe_pdf;
 %ratefig(datasett=&tema_navn.&nevner._IJUST_BOHF, bildeformat=pdf);
+
+/*** Lager datasett for Instant Atlas *****/
+
+/*liggetid_vag_p1*/
+%Let beskrivelse=liggetid_vag_p1_rate;
+data helseatl.IA_FH_&beskrivelse;
+  set &tema_navn.&nevner._IJUST_BOHF (keep = bohf rateSnitt &tema_navn.&nevner innbyggere rename=(rateSnitt=Rate &tema_navn.&nevner=Antall)); 
+
+BoHF_Navn=vvalue(BoHF);
+Gruppe = 2;
+Niva =32;
+
+numeric = "numeric";
+Tom_rad = "";
+Tom_rute = "";
+run;
 
 
 /**********************/
@@ -84,12 +116,12 @@
 %let tittel=;
 %let rv1=&tema_navn.&nevner;
 %let type=&par_rob.&grp; 
-%let tabellvar1=&tema_navn.&nevner;
+%let tabellvar1=RateSnitt;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="Liggetid" &tabellvar2="Fødsler";
+%let labeltabell=&tabellvar1="Liggedøgn" &tabellvar2="Fødsler";
 %let xlabel=Antall liggedøgn pr. fødsel.;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 NLnum8.1 &tabellvar2 NLnum8.0;
 %let skala=;
 
 %let mappe=&mappe_png;
@@ -97,6 +129,22 @@
 
 %let mappe=&mappe_pdf;
 %ratefig(datasett=&tema_navn.&nevner._IJUST_BOHF, bildeformat=pdf);
+
+/*** Lager datasett for Instant Atlas *****/
+
+/*liggetid_ks_p0*/
+%Let beskrivelse=liggetid_ks_p0_rate;
+data helseatl.IA_FH_&beskrivelse;
+  set &tema_navn.&nevner._IJUST_BOHF (keep = bohf rateSnitt &tema_navn.&nevner innbyggere rename=(rateSnitt=Rate &tema_navn.&nevner=Antall)); 
+
+BoHF_Navn=vvalue(BoHF);
+Gruppe = 2;
+Niva =33;
+
+numeric = "numeric";
+Tom_rad = "";
+Tom_rute = "";
+run;
 
 /*****************/
 /*** PARITET 1 ***/
@@ -110,12 +158,12 @@
 %let tittel=;
 %let rv1=&tema_navn.&nevner;
 %let type=&par_rob.&grp; 
-%let tabellvar1=&tema_navn.&nevner;
+%let tabellvar1=RateSnitt;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="Liggetid" &tabellvar2="Fødsler";
+%let labeltabell=&tabellvar1="Liggedøgn" &tabellvar2="Fødsler";
 %let xlabel=Antall liggedøgn pr. fødsel.;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 NLnum8.1 &tabellvar2 NLnum8.0;
 %let skala=;
 
 
@@ -124,3 +172,19 @@
 
 %let mappe=&mappe_pdf;
 %ratefig(datasett=&tema_navn.&nevner._IJUST_BOHF, bildeformat=pdf);
+
+/*** Lager datasett for Instant Atlas *****/
+
+/*liggetid_ks_p1*/
+%Let beskrivelse=liggetid_ks_p1_rate;
+data helseatl.IA_FH_&beskrivelse;
+  set &tema_navn.&nevner._IJUST_BOHF (keep = bohf rateSnitt &tema_navn.&nevner innbyggere rename=(rateSnitt=Rate &tema_navn.&nevner=Antall)); 
+
+BoHF_Navn=vvalue(BoHF);
+Gruppe = 2;
+Niva =34;
+
+numeric = "numeric";
+Tom_rad = "";
+Tom_rute = "";
+run;
