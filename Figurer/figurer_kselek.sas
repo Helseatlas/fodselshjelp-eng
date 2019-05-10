@@ -20,8 +20,8 @@
 %let tabellvar1=&tema_navn;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="Keisersnitt" &tabellvar2="Fødsler";
-%let xlabel=Antall pr. 1 000  førstegangsfødende.;
+%let labeltabell=&tabellvar1="Cesarean" &tabellvar2="Births";
+%let xlabel=Number pr. 1 000  births.;
 %let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
 %let skala=;
 
