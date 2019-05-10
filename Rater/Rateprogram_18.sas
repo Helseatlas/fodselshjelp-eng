@@ -44,7 +44,7 @@ options sasautos=("&filbane.Makroer" SASAUTOS);
 %let HF=1; 			/*Bildefiler*/ %let Fig_AA_HF=; 	%let Fig_KI_HF=;
 %let RHF=;			/*Bildefiler*/ %let Fig_AA_RHF=; 	%let Fig_KI_RHF=;
 %let Oslo=; 		/*Bildefiler*/ %let Fig_AA_Oslo=; 	%let Fig_KI_Oslo=;
-%let Verstkommune_HN=;
+%let Vertskommune_HN=;
 /* Dersom du skal ha bilde-filer */
 %let bildeformat=png; /*Format*/
 %let lagring="\\hn.helsenord.no\UNN-Avdelinger\SKDE.avd\Analyse\Data\SAS\Bildefiler"; /*Hvor skal filene lagres*/
@@ -52,14 +52,14 @@ options sasautos=("&filbane.Makroer" SASAUTOS);
 %let skala=; /* Skala pÂ x-aksen pÂ figurene - eks: values=(0 to 0.8 by 0.2) */
 
 /* Hvilke tabeller ¯nsker du? */
-%Let Vis_Tabeller=1; /*1=Enkel tabell, 2=Enkel + CV og SCV, 3=Enkel + CV og SCV + Ujusterte rater og KI*/
+%Let Vis_Tabeller=3; /*1=Enkel tabell, 2=Enkel + CV og SCV, 3=Enkel + CV og SCV + Ujusterte rater og KI*/
 %Let TallFormat=Excel; /*Tallformat i tabeller: NLnum=tusenskilletegn, Excel=klart til excel */
 /* Vil du ha kart? */
 %let kart=; /* ja eller nei */
 
 %let rateformat=2; /*Antall desimaler pÂ rate: 0,1 eller 2*/
 
-%let Ut_sett=0; /*Utdata, dersom du ¯nsker stor tabell med KI osv., --> Ut_sett=1 */
+%let Ut_sett=1; /*Utdata, dersom du ¯nsker stor tabell med KI osv., --> Ut_sett=1 */
 
 /******  PERIODE OG ALDER  **************************************************************/
 %let Start≈r=2015;

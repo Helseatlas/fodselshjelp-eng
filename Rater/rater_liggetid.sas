@@ -66,7 +66,7 @@ proc datasets nolist;
 delete RV: Norge: figur: Andel Alder: Bo: HN: Kom: Fylke: VK: bydel: snudd ;
 run;
 
-%forholdstall(ds=&tema_navn.&nevner._IJUST_BOHF, tab=0);
+%forholdstall(ds=&tema_navn.&nevner._IJUST_BOHF, tab=1);
 
 
 /*****************/
@@ -119,7 +119,7 @@ proc datasets nolist;
 delete RV: Norge: figur: Andel Alder: Bo: HN: Kom: Fylke: VK: bydel: snudd ;
 run;
 
-%forholdstall(ds=&tema_navn.&nevner._IJUST_BOHF, tab=0);
+%forholdstall(ds=&tema_navn.&nevner._IJUST_BOHF, tab=1);
 
 /**********************/
 /*** KEISERSNITT ***/
@@ -177,7 +177,7 @@ proc datasets nolist;
 delete RV: Norge: figur: Andel Alder: Bo: HN: Kom: Fylke: VK: bydel: snudd ;
 run;
 
-%forholdstall(ds=&tema_navn.&nevner._IJUST_BOHF, tab=0);
+%forholdstall(ds=&tema_navn.&nevner._IJUST_BOHF, tab=1);
 
 
 /*****************/
@@ -203,6 +203,64 @@ run;
 data innb_&tema_navn._&nevner;
 set FH_&tema_navn._&nevner;
 where &par_rob=&grp and forlosning=2;
+innbyggere=num_med_liggetid;
+run;
+
+data innb_&tema_navn._&nevner;
+set innb_&tema_navn._&nevner;
+keep aar alder ermann komnr bydel innbyggere;
+run;
+
+
+/* Rateprogram; */
+
+%let Ratefil=FH_&tema_navn._&nevner;
+%Let innbyggerfil=innb_&tema_navn._&nevner;
+
+
+%let RV_variabelnavn= &agg_var; /*navn på ratevariabel i det aggregerte datasettet*/
+%Let ratevariabel = &tema; /*Brukes til å lage "pene" overskrifter*/
+%Let forbruksmal = &tema_navn.&nevner; /*Brukes til å lage tabell-overskrift i Årsvarfig, gir også navn til 'ut'-datasett*/
+
+%utvalgx;
+%omraadeNorge;
+%rateberegninger;
+
+proc datasets nolist;
+delete RV: Norge: figur: Andel Alder: Bo: HN: Kom: Fylke: VK: bydel: snudd ;
+run;
+
+%forholdstall(ds=&tema_navn.&nevner._IJUST_BOHF, tab=1);
+
+
+
+
+/*****************/
+/*** ALLE      ***/
+/*****************/
+/* Slå sammen vag/ks, par0/1 for å sammenligne med barseltid for samvariasjon */
+
+%let nevner=alle;
+%let par_rob=;
+%let grp= ;
+%let tema_navn=&tema; /* to use for forbuksmal  */
+
+/*VELGER UT AKTUELL PARITET OG FORLØSNINGSMETODE FRA AGGREGERT DATASETT*/
+data FH_&tema_navn._&nevner;
+  set helseatl.FH_&tema.;
+
+  *keep all vag/ks and all p0/1;
+
+    
+  liggedogn=liggetid*num_med_liggetid;
+  alder=aldersgruppe; /* the variable alder can not be used as is when we mix par0/1 because par0/alder20 has a different definition than par1/alder20 */
+                      /* the variable aldersgruppe however is split into 6 groups, 3 for par0 and 3 for par1 */
+run;
+
+/*BRUKER ANTALL MED liggetid OPPGITT SOM NEVNER*/
+data innb_&tema_navn._&nevner;
+set FH_&tema_navn._&nevner;
+
 innbyggere=num_med_liggetid;
 run;
 

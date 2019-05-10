@@ -45,6 +45,40 @@ run;
 %forholdstall(ds=&tema_navn._UJUST_BOHF, tab=0);
 %forholdstall(ds=&tema_navn._JUST_BOHF,  tab=0);
 
+/*BLØDNING VED VAG FORLØSNING DELT PÅ ALLE FØDSLER - TIL FIG_TOTALRATE*/
+
+data FH_alle_par0;
+set helseatl.FH_all_paritet;
+if paritet=0 then output;
+run;
+
+proc sql;
+create table FH_alleinnb_par0 as
+select distinct komnr, ermann, alder, aar, bydel, sum(fodsler) as innbyggere
+from FH_alle_par0
+group by aar, ermann, alder, komnr, bydel;
+quit;
+
+%let Ratefil=FH_&tema._&par_rob.&grp.;
+%Let innbyggerfil=FH_alleinnb_par0;
+
+
+%let RV_variabelnavn= num_&agg_var; /*navn på ratevariabel i det aggregerte datasettet*/
+%Let ratevariabel = &tema; /*Brukes til å lage "pene" overskrifter*/
+%Let forbruksmal = &tema_navn._alle; /*Brukes til å lage tabell-overskrift i Årsvarfig, gir også navn til 'ut'-datasett*/
+
+%utvalgx;
+%omraadeNorge;
+%rateberegninger;
+
+proc datasets nolist;
+delete RV: Norge: figur: Andel Alder: Bo: HN: Kom: Fylke: VK: bydel: snudd ;
+run;
+
+%forholdstall(ds=&tema_navn._alle_IJUST_BOHF, tab=0);
+
+
+
 /*****************/
 /*** PARITET 1 ***/
 /*****************/
@@ -78,16 +112,37 @@ run;
 %forholdstall(ds=&tema_navn._UJUST_BOHF, tab=0);
 %forholdstall(ds=&tema_navn._JUST_BOHF,  tab=0);
 
+/*BLØDNING VED VAG FORLØSNING DELT PÅ ALLE FØDSLER - TIL FIG_TOTALRATE*/
+
+data FH_alle_par1;
+set helseatl.FH_all_paritet;
+if paritet=1 then output;
+run;
+
+proc sql;
+create table FH_alleinnb_par1 as
+select distinct komnr, ermann, alder, aar, bydel, sum(fodsler) as innbyggere
+from FH_alle_par1
+group by aar, ermann, alder, komnr, bydel;
+quit;
+
+%let Ratefil=FH_&tema._&par_rob.&grp.;
+%Let innbyggerfil=FH_alleinnb_par1;
 
 
+%let RV_variabelnavn= num_&agg_var; /*navn på ratevariabel i det aggregerte datasettet*/
+%Let ratevariabel = &tema; /*Brukes til å lage "pene" overskrifter*/
+%Let forbruksmal = &tema_navn._alle; /*Brukes til å lage tabell-overskrift i Årsvarfig, gir også navn til 'ut'-datasett*/
 
+%utvalgx;
+%omraadeNorge;
+%rateberegninger;
 
+proc datasets nolist;
+delete RV: Norge: figur: Andel Alder: Bo: HN: Kom: Fylke: VK: bydel: snudd ;
+run;
 
-
-
-
-
-
+%forholdstall(ds=&tema_navn._alle_IJUST_BOHF, tab=0);
 
 /************* NEVNER KEISERSNITT **************/
 
@@ -169,12 +224,12 @@ run;
 
 
 /************* INNDELING ROBSON  **************/
-/************* NEVNER VAGINALE   **************/
+/************* NEVNER = ALLE  **************/
 
 
 %let tema=blod15_vag;
 %let agg_var=vag_blodning;
-%let nevner=vag;  
+%let nevner=alle;  
 
 
 /*****************/
