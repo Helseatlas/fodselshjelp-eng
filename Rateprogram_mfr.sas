@@ -77,6 +77,11 @@ options sasautos=("&filbane.Makroer" SASAUTOS);
 if alder<=28 then alder_ny=1; 
 else if 29<=alder<=33 then alder_ny=2;
 else if 34<=alder then alder_ny=3;
+
+%if &forbruksmal=liggetidalle %then %do;
+  alder_ny=alder;
+%end;
+
 %mend;
 
 
