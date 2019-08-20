@@ -30,7 +30,7 @@ data &forbruksmal._bohf;
 set &forbruksmal._ijust_bohf;
 run;
 
-%forholdstall(ds=&forbruksmal._ijust_bohf, tab=1);
+%forholdstall(ds=&forbruksmal._ijust_bohf, tab=0);
 
 /*********
  * Total personer m polikl kontakt i barseltid *
@@ -55,7 +55,7 @@ data &forbruksmal._bohf;
 set &forbruksmal._ijust_bohf;
 run;
 
-%forholdstall(ds=&forbruksmal._ijust_bohf, tab=1);
+%forholdstall(ds=&forbruksmal._ijust_bohf, tab=0);
 
 /*********
  * Total personer m polikl kontakt første 7 dager i barseltid *
@@ -104,7 +104,7 @@ data &forbruksmal._bohf;
 set &forbruksmal._ijust_bohf;
 run;
 
-%forholdstall(ds=&forbruksmal._ijust_bohf, tab=1);
+%forholdstall(ds=&forbruksmal._ijust_bohf, tab=0);
 
 
 /*********
@@ -130,6 +130,6 @@ data &forbruksmal._bohf;
 set &forbruksmal._ijust_bohf;
 run;
 
-%forholdstall(ds=&forbruksmal._ijust_bohf, tab=1);
+%forholdstall(ds=&forbruksmal._ijust_bohf, tab=0);
 
 

@@ -41,7 +41,7 @@ proc datasets nolist;
 delete RV: Norge: figur: Andel Alder: Bo: HN: Kom: Fylke: VK: bydel: snudd ;
 run;
 
-%forholdstall(ds=&tema_navn._IJUST_BOHF, tab=1);
+%forholdstall(ds=&tema_navn._IJUST_BOHF, tab=0);
 %forholdstall(ds=&tema_navn._UJUST_BOHF, tab=0);
 %forholdstall(ds=&tema_navn._JUST_BOHF,  tab=0);
 
@@ -74,7 +74,7 @@ proc datasets nolist;
 delete RV: Norge: figur: Andel Alder: Bo: HN: Kom: Fylke: VK: bydel: snudd ;
 run;
 
-%forholdstall(ds=&tema_navn._IJUST_BOHF, tab=1);
+%forholdstall(ds=&tema_navn._IJUST_BOHF, tab=0);
 %forholdstall(ds=&tema_navn._UJUST_BOHF, tab=0);
 %forholdstall(ds=&tema_navn._JUST_BOHF,  tab=0);
 

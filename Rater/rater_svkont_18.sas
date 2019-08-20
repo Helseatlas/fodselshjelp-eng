@@ -22,7 +22,7 @@ proc datasets nolist;
 delete RV: Norge: figur: Andel Alder: Bo: HN: Kom: Fylke: VK: bydel: snudd svkontakt_tot_NORGE;
 run;
 
-%forholdstall(ds=&forbruksmal._ijust_bohf, tab=1);
+%forholdstall(ds=&forbruksmal._ijust_bohf, tab=0);
 
 
 /*PRIV KONTAKTER*/
@@ -42,7 +42,7 @@ proc datasets nolist;
 delete RV: Norge: figur: Andel Alder: Bo: HN: Kom: Fylke: VK: bydel: snudd svkontakt_tot_NORGE;
 run;
 
-%forholdstall(ds=&forbruksmal._ijust_bohf, tab=1);
+%forholdstall(ds=&forbruksmal._ijust_bohf, tab=0);
 
 /*OFF KONTAKTER*/
 
@@ -61,7 +61,7 @@ proc datasets nolist;
 delete RV: Norge: figur: Andel Alder: Bo: HN: Kom: Fylke: VK: bydel: snudd svkontakt_tot_NORGE;
 run;
 
-%forholdstall(ds=&forbruksmal._ijust_bohf, tab=1);
+%forholdstall(ds=&forbruksmal._ijust_bohf, tab=0);
 
 
 /*ALLE KONTAKTER MED UTVALGTE KODER*/
@@ -81,7 +81,7 @@ proc datasets nolist;
 delete RV: Norge: figur: Andel Alder: Bo: HN: Kom: Fylke: VK: bydel: snudd svkontakt_tot_NORGE;
 run;
 
-%forholdstall(ds=&forbruksmal._ijust_bohf, tab=1);
+%forholdstall(ds=&forbruksmal._ijust_bohf, tab=0);
 
 
 
@@ -107,7 +107,7 @@ delete RV: Norge: figur: Andel Alder: Bo: HN: Kom: Fylke: VK: bydel: snudd svkon
 run;
 
 
-%forholdstall(ds=&forbruksmal._ijust_bohf, tab=1);
+%forholdstall(ds=&forbruksmal._ijust_bohf, tab=0);
 
 
 
@@ -138,7 +138,7 @@ proc datasets nolist;
 delete RV: Norge: figur: Andel Alder: Bo: HN: Kom: Fylke: VK: bydel: snudd svkontakt_tot_NORGE;
 run;
 
-%forholdstall(ds=&forbruksmal._ijust_bohf, tab=1);
+%forholdstall(ds=&forbruksmal._ijust_bohf, tab=0);
 
 /*2-5 KONTAKTER*/
 
@@ -155,7 +155,7 @@ proc datasets nolist;
 delete RV: Norge: figur: Andel Alder: Bo: HN: Kom: Fylke: VK: bydel: snudd svkontakt_tot_NORGE;
 run;
 
-%forholdstall(ds=&forbruksmal._ijust_bohf, tab=1);
+%forholdstall(ds=&forbruksmal._ijust_bohf, tab=0);
 
 
 /*Mer enn 5 KONTAKTER*/
@@ -173,6 +173,6 @@ proc datasets nolist;
 delete RV: Norge: figur: Andel Alder: Bo: HN: Kom: Fylke: VK: bydel: snudd svkontakt_tot_NORGE;
 run;
 
-%forholdstall(ds=&forbruksmal._ijust_bohf, tab=1);
+%forholdstall(ds=&forbruksmal._ijust_bohf, tab=0);
 
 
