@@ -22,8 +22,8 @@
 %let tabellvar1=&tema_navn;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="Blødning" &tabellvar2="Fødsler";
-%let xlabel=Antall pr. 1 000 førstegangsfødende som fødte vaginalt.;
+%let labeltabell=&tabellvar1="Haemorrhage" &tabellvar2="Births";
+%let xlabel=Number per 1,000 primiparous women who gave birth vaginally.;
 %let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;*values=(0 to 60 by 10);
 
@@ -52,8 +52,8 @@
 %let tabellvar1=&tema_navn;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="Blødning" &tabellvar2="Fødsler";
-%let xlabel=Antall pr. 1 000 flergangsfødende som fødte vaginalt.;
+%let labeltabell=&tabellvar1="Haemorrhage" &tabellvar2="Births";
+%let xlabel=Number per 1,000 multiparous women who gave birth vaginally.;
 %let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;*values=(0 to 60 by 10);
 
@@ -91,7 +91,7 @@
 %let tabellvar1=&tema_navn;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1=">1500 ml" &tabellvar2="Fødsler";
+%let labeltabell=&tabellvar1=">1500 ml" &tabellvar2="Births";
 %let xlabel=Antall pr. 1 000 førstegangsfødende med keisersnitt.;
 %let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
@@ -121,7 +121,7 @@
 %let tabellvar1=&tema_navn;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1=">1500 ml" &tabellvar2="Fødsler";
+%let labeltabell=&tabellvar1=">1500 ml" &tabellvar2="Births";
 %let xlabel=Antall pr. 1 000 flergangsfødende med keisersnitt.;
 %let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
