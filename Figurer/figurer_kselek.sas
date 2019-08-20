@@ -65,7 +65,7 @@ run;
 %let tabellvar1=&tema_navn;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="Keisersnitt" &tabellvar2="Fødsler";
+%let labeltabell=&tabellvar1="Caesarean" &tabellvar2="Fødsler";
 %let xlabel=Antall pr. 1 000  flergangsfødende.;
 %let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;

@@ -108,7 +108,7 @@ run;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Oper. birth" &tabellvar2="Births";
-%let xlabel=Antall pr. 1 000 fødsler, Robsongruppe 1.;
+%let xlabel=Number per 1,000 births in Robson group 1.;
 %let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 

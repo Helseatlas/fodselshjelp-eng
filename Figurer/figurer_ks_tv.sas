@@ -18,13 +18,13 @@
 %let fignavn=ksakutt_tv;
 %let type=p0;
 %let tittel=;
-%let xlabel=Antall pr. 1 000 førstegangsfødende.;
-%let label_1=Akutt KS;
-%let label_2=Instrumentell;
+%let xlabel=Number per 1,000 primiparous women.;
+%let label_1=Emerg. C-sec.;
+%let label_2=Operative del.;
 %let tabellvar1=antall_1;
 %let tabellvar2=antall_2;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="Akutt KS" &tabellvar2="Instr." ;
+%let labeltabell=&tabellvar1="Emerg. caesarean" &tabellvar2="Oper. del." ;
 %let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;*values=(0 to 18 by 3);
 
@@ -49,13 +49,13 @@
 %let fignavn=ksakutt_tv;
 %let type=p1;
 %let tittel=;
-%let xlabel=Antall pr. 1 000 flergangsfødende.;
-%let label_1=Akutt KS;
-%let label_2=Instrumentell;
+%let xlabel=Number per 1,000 multiparous women.;
+%let label_1=Emerg. C-sec.;
+%let label_2=Operative del.;
 %let tabellvar1=antall_1;
 %let tabellvar2=antall_2;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="Akutt KS" &tabellvar2="Instr." ;
+%let labeltabell=&tabellvar1="Emerg. C-sec." &tabellvar2="Oper. del." ;
 %let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;*values=(0 to 18 by 3);
 
