@@ -150,7 +150,7 @@ run;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="&tema" &tabellvar2="vag førstegangsfødende";
-%let xlabel=Antall pr. 1 000  førstegangsfødende.;
+%let xlabel=Number per 1,000 primiparous women.;
 %let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
@@ -217,7 +217,7 @@ run;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="&tema" &tabellvar2="vag flergangsfødende";
-%let xlabel=Antall pr. 1 000  flergangsfødende.;
+%let xlabel=Number per 1,000 multiparous women.;
 %let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
@@ -243,7 +243,7 @@ run;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="&tema" &tabellvar2="førstegangsfødende";
-%let xlabel=Antall pr. 1 000  førstegangsfødende.;
+%let xlabel=Number per 1,000 primiparous women.;
 %let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
@@ -269,7 +269,7 @@ run;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="&tema" &tabellvar2="flergangsfødende";
-%let xlabel=Antall pr. 1 000  flergangsfødende.;
+%let xlabel=Number per 1,000 multiparous women.;
 %let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 

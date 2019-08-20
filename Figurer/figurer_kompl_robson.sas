@@ -51,8 +51,8 @@ run;
 %let tabellvar1=tot_antall;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="Kompl." &tabellvar2="Fødsler";
-%let xlabel=Antall pr. 1 000 fødsler, Robsongruppe 1.;
+%let labeltabell=&tabellvar1="Compl." &tabellvar2="Births";
+%let xlabel=Number per 1,000 births in Robson group 1.;
 %let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
@@ -108,8 +108,8 @@ run;
 %let tabellvar1=tot_antall;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="Kompl." &tabellvar2="Fødsler";
-%let xlabel=Antall pr. 1 000 fødsler, Robsongruppe 3.;
+%let labeltabell=&tabellvar1="Compl." &tabellvar2="Births";
+%let xlabel=Number per 1,000 births in Robson group 3.;
 %let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
