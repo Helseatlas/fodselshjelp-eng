@@ -50,7 +50,7 @@
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Ruptur gr. 3/4" &tabellvar2="Births";
-%let xlabel=Antall pr. 1 000  vaginale flergangsfødende som fødte vaginalt.;
+%let xlabel=Antall pr. 1 000 flergangsfødende som fødte vaginalt.;
 %let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 

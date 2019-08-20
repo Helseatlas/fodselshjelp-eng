@@ -273,11 +273,11 @@ run;
 %let skala=;
 
 %let mappe=&mappe_png;
-%ratefig_todeltSoyle(datasett=&tema._NPR_KUHR_bohf, legendplace=location=outside position=bottom down=1);
+%ratefig_todeltSoyle(sprak=en, datasett=&tema._NPR_KUHR_bohf, legendplace=location=outside position=bottom down=1);
 
 
 %let mappe=&mappe_pdf;
-%ratefig_todeltSoyle(datasett=&tema._NPR_KUHR_bohf, bildeformat=pdf , legendplace=location=outside position=bottom down=1);
+%ratefig_todeltSoyle(sprak=en, datasett=&tema._NPR_KUHR_bohf, bildeformat=pdf , legendplace=location=outside position=bottom down=1);
 
 /*SAMMENSATT FIGUR, NPR + KUHR MED W99, KONTAKTER*/
 
@@ -323,11 +323,11 @@ run;
 %let skala=;
 
 %let mappe=&mappe_png;
-%ratefig_todeltSoyle(datasett=&tema._NPR_KUHRW99_bohf, legendplace=location=outside position=bottom down=1);
+%ratefig_todeltSoyle(sprak=en, datasett=&tema._NPR_KUHRW99_bohf, legendplace=location=outside position=bottom down=1);
 
 
 %let mappe=&mappe_pdf;
-%ratefig_todeltSoyle(datasett=&tema._NPR_KUHRW99_bohf, bildeformat=pdf , legendplace=location=outside position=bottom down=1);
+%ratefig_todeltSoyle(sprak=en, datasett=&tema._NPR_KUHRW99_bohf, bildeformat=pdf , legendplace=location=outside position=bottom down=1);
 
 
 %let vis_aarsvar_todelt=1;
@@ -376,11 +376,11 @@ run;
 %let skala=;
 
 %let mappe=&mappe_png;
-%ratefig_todeltSoyle(datasett=&tema._NPR_KUHR_p_bohf2, legendplace=location=outside position=bottom down=1);
+%ratefig_todeltSoyle(sprak=en, datasett=&tema._NPR_KUHR_p_bohf2, legendplace=location=outside position=bottom down=1);
 
 
 %let mappe=&mappe_pdf;
-%ratefig_todeltSoyle(datasett=&tema._NPR_KUHR_p_bohf2, bildeformat=pdf , legendplace=location=outside position=bottom down=1);
+%ratefig_todeltSoyle(sprak=en, datasett=&tema._NPR_KUHR_p_bohf2, bildeformat=pdf , legendplace=location=outside position=bottom down=1);
 
 
 %let vis_aarsvar_todelt=1;

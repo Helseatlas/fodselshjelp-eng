@@ -93,7 +93,7 @@
 %let skala=;
 
 %let mappe=&mappe_png;
-%ratefig_todeltSoyle(datasett=&tema._vag_ks_bohf);
+%ratefig_todeltSoyle(sprak=en, datasett=&tema._vag_ks_bohf);
 
 %let mappe=&mappe_pdf;
-%ratefig_todeltSoyle(datasett=&tema._vag_ks_bohf, bildeformat=pdf );
+%ratefig_todeltSoyle(sprak=en, datasett=&tema._vag_ks_bohf, bildeformat=pdf );

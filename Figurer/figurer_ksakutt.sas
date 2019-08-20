@@ -126,11 +126,11 @@ run;
 %let skala=;*values=(0 to 300 by 50); * if run with no aarsvar, then the scale can be 0 to 250;
 
 %let mappe=&mappe_png;
-%ratefig_todeltSoyle(datasett=ks_delt_p0_bohf, bildeformat=png );
+%ratefig_todeltSoyle(sprak=en, datasett=ks_delt_p0_bohf, bildeformat=png );
 
 
 %let mappe=&mappe_pdf;
-%ratefig_todeltSoyle(datasett=ks_delt_p0_bohf, bildeformat=pdf );
+%ratefig_todeltSoyle(sprak=en, datasett=ks_delt_p0_bohf, bildeformat=pdf );
 
 
 /*SAMMENSATT FIGUR, AKUTT+ELEKTIVT, PARITET 1*/
@@ -158,11 +158,11 @@ run;
 %let skala=;*values=(0 to 300 by 50); * if run with no aarsvar, then the scale can be 0 to 250;
 
 %let mappe=&mappe_png;
-%ratefig_todeltSoyle(datasett=ks_delt_p1_bohf, bildeformat=png );
+%ratefig_todeltSoyle(sprak=en, datasett=ks_delt_p1_bohf, bildeformat=png );
 
 
 %let mappe=&mappe_pdf;
-%ratefig_todeltSoyle(datasett=ks_delt_p1_bohf, bildeformat=pdf );
+%ratefig_todeltSoyle(sprak=en, datasett=ks_delt_p1_bohf, bildeformat=pdf );
 
 
 

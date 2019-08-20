@@ -114,11 +114,11 @@
 %let skala=values=(0,1,2,3,4,5,6);
 
 %let mappe=&mappe_png;
-%ratefig_todeltSoyle(datasett=&tema._offpriv_bohf, legendplace=location=outside position=bottom down=1);
+%ratefig_todeltSoyle(sprak=en, datasett=&tema._offpriv_bohf, legendplace=location=outside position=bottom down=1);
 
 
 %let mappe=&mappe_pdf;
-%ratefig_todeltSoyle(datasett=&tema._offpriv_bohf, bildeformat=pdf , legendplace=location=outside position=bottom down=1);
+%ratefig_todeltSoyle(sprak=en, datasett=&tema._offpriv_bohf, bildeformat=pdf , legendplace=location=outside position=bottom down=1);
 
 
 
@@ -166,11 +166,11 @@ run;
 %let skala=values=(0,2,4,6,8,10,12,14);
 
 %let mappe=&mappe_png;
-%ratefig_todeltSoyle(datasett=&tema._NPR_KUHR_bohf2, legendplace=location=outside position=bottom down=1);
+%ratefig_todeltSoyle(sprak=en, datasett=&tema._NPR_KUHR_bohf2, legendplace=location=outside position=bottom down=1);
 
 
 %let mappe=&mappe_pdf;
-%ratefig_todeltSoyle(datasett=&tema._NPR_KUHR_bohf2, bildeformat=pdf , legendplace=location=outside position=bottom down=1);
+%ratefig_todeltSoyle(sprak=en, datasett=&tema._NPR_KUHR_bohf2, bildeformat=pdf , legendplace=location=outside position=bottom down=1);
 
 
 %let vis_aarsvar_todelt=1;
@@ -213,11 +213,11 @@ run;
 %let skala=values=(0,1,2,3,4,5,6,7,8,9);
 
 %let mappe=&mappe_png;
-%ratefig_todeltSoyle(datasett=&tema._KUHR_bohf2, legendplace=location=outside position=bottom down=1);
+%ratefig_todeltSoyle(sprak=en, datasett=&tema._KUHR_bohf2, legendplace=location=outside position=bottom down=1);
 
 
 %let mappe=&mappe_pdf;
-%ratefig_todeltSoyle(datasett=&tema._KUHR_bohf2, bildeformat=pdf , legendplace=location=outside position=bottom down=1);
+%ratefig_todeltSoyle(sprak=en, datasett=&tema._KUHR_bohf2, bildeformat=pdf , legendplace=location=outside position=bottom down=1);
 
 
 %let vis_aarsvar_todelt=1;

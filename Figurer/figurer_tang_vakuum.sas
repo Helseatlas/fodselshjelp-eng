@@ -20,8 +20,8 @@
 %let tabellvar1=&tema_navn;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="Instr. fødsel" &tabellvar2="Fødsler";
-%let xlabel=Antall pr. 1 000  førstegangsfødende som fødte vaginalt.;
+%let labeltabell=&tabellvar1="Oper. birth" &tabellvar2="Births";
+%let xlabel=Number per 1,000 primiparous women who gave birth vaginally.;
 %let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
@@ -62,8 +62,8 @@ run;
 %let tabellvar1=&tema_navn;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="Instr. fødsel" &tabellvar2="Fødsler";
-%let xlabel=Antall pr. 1 000  flergangsfødende som fødte vaginalt.;
+%let labeltabell=&tabellvar1="Oper. birth" &tabellvar2="Births";
+%let xlabel=Number per 1,000 multiparous women who gave birth vaginally.;
 %let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
@@ -107,7 +107,7 @@ run;
 %let tabellvar1=&tema_navn;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="Instr. fødsel" &tabellvar2="Fødsler";
+%let labeltabell=&tabellvar1="Oper. birth" &tabellvar2="Births";
 %let xlabel=Antall pr. 1 000 fødsler, Robsongruppe 1.;
 %let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
@@ -174,7 +174,7 @@ run;
 %let tabellvar1=&tema_navn;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="Instr. fødsel" &tabellvar2="Fødsler";
+%let labeltabell=&tabellvar1="Oper. birth" &tabellvar2="Births";
 %let xlabel=Antall pr. 1 000 fødsler, Robsongruppe 3.;
 %let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
@@ -297,22 +297,22 @@ run;
 %let fignavn=;
 %let type=p0;
 %let tittel=;
-%let xlabel=Antall pr. 1 000  førstegangsfødende som fødte vaginalt.;
+%let xlabel=Number per 1,000 primiparous women who gave birth vaginally.;
 %let label_1=Vakuum;
 %let label_2=Tang;
 %let tabellvar1=tot_antall;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="Instr. fødsel" &tabellvar2="Fødsler" ;
+%let labeltabell=&tabellvar1="Oper. birth" &tabellvar2="Births" ;
 %let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;*values=(0 to 18 by 3);
 
 %let mappe=&mappe_png;
-%ratefig_todeltSoyle(datasett=&tema._delt_p0_bohf, bildeformat=png);
+%ratefig_todeltSoyle(sprak=en, datasett=&tema._delt_p0_bohf, bildeformat=png);
 
 
 %let mappe=&mappe_pdf;
-%ratefig_todeltSoyle(datasett=&tema._delt_p0_bohf, bildeformat=pdf );
+%ratefig_todeltSoyle(sprak=en, datasett=&tema._delt_p0_bohf, bildeformat=pdf );
 
 /*SAMMENSATT FIGUR, TANG OG VAKUUM, PARITET 1*/
 
@@ -328,21 +328,21 @@ run;
 %let fignavn=;
 %let type=p1;
 %let tittel=;
-%let xlabel=Antall pr. 1 000  flergangsfødende som fødte vaginalt.;
+%let xlabel=Number per 1,000 multiparous women who gave birth vaginally.;
 %let label_1=Vakuum;
 %let label_2=Tang;
 %let tabellvar1=tot_antall;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="Instr. fødsel" &tabellvar2="Fødsler" ;
+%let labeltabell=&tabellvar1="Oper. birth" &tabellvar2="Births" ;
 %let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;*values=(0 to 18 by 3);
 
 %let mappe=&mappe_png;
-%ratefig_todeltSoyle(datasett=&tema._delt_p1_bohf, bildeformat=png);
+%ratefig_todeltSoyle(sprak=en, datasett=&tema._delt_p1_bohf, bildeformat=png);
 
 
 %let mappe=&mappe_pdf;
-%ratefig_todeltSoyle(datasett=&tema._delt_p1_bohf, bildeformat=pdf );
+%ratefig_todeltSoyle(sprak=en, datasett=&tema._delt_p1_bohf, bildeformat=pdf );
 
 

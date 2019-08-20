@@ -29,11 +29,11 @@
 %let skala=;*values=(0 to 18 by 3);
 
 %let mappe=&mappe_png;
-%ratefig_todeltSoyle(datasett=ks_tv_p0_bohf);
+%ratefig_todeltSoyle(sprak=en, datasett=ks_tv_p0_bohf);
 
 
 %let mappe=&mappe_pdf;
-%ratefig_todeltSoyle(datasett=ks_tv_p0_bohf, bildeformat=pdf );
+%ratefig_todeltSoyle(sprak=en, datasett=ks_tv_p0_bohf, bildeformat=pdf );
 
 
 /*SAMMENSATT FIGUR, KS (kun AKUTT) og INSTRUMENTELL FORLØSNING (TANG+VAK), PARITET 1*/
@@ -60,11 +60,11 @@
 %let skala=;*values=(0 to 18 by 3);
 
 %let mappe=&mappe_png;
-%ratefig_todeltSoyle(datasett=ks_tv_p1_bohf);
+%ratefig_todeltSoyle(sprak=en, datasett=ks_tv_p1_bohf);
 
 
 %let mappe=&mappe_pdf;
-%ratefig_todeltSoyle(datasett=ks_tv_p1_bohf, bildeformat=pdf );
+%ratefig_todeltSoyle(sprak=en, datasett=ks_tv_p1_bohf, bildeformat=pdf );
 
 
 
