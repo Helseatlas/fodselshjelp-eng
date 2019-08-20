@@ -20,8 +20,8 @@
 %let tabellvar1=&tema_navn;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="Klipping" &tabellvar2="Fødsler";
-%let xlabel=Antall pr. 1 000  førstegangsfødende som fødte vaginalt.;
+%let labeltabell=&tabellvar1="Episiotomy" &tabellvar2="Births";
+%let xlabel=Number per 1,000 primiparous women who gave birth vaginally.;
 %let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
@@ -62,8 +62,8 @@ run;
 %let tabellvar1=&tema_navn;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="Klipping" &tabellvar2="Fødsler";
-%let xlabel=Antall pr. 1 000  flergangsfødende som fødte vaginalt.;
+%let labeltabell=&tabellvar1="Episiotomy" &tabellvar2="Births";
+%let xlabel=Number per 1,000 multiparous women who gave birth vaginally.;
 %let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
@@ -107,8 +107,8 @@ run;
 %let tabellvar1=&tema_navn;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="Klipping" &tabellvar2="Fødsler";
-%let xlabel=Antall pr. 1 000 fødsler, Robsongruppe 1.;
+%let labeltabell=&tabellvar1="Episiotomy" &tabellvar2="Births";
+%let xlabel=Number per 1,000 births in Robson group 1.;
 %let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
@@ -133,8 +133,8 @@ run;
 %let tabellvar1=&tema_navn;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="Klipping" &tabellvar2="Fødsler";
-%let xlabel=Antall pr. 1 000  førstegangsfødsler.;
+%let labeltabell=&tabellvar1="Episiotomy" &tabellvar2="Births";
+%let xlabel=Number per 1,000 primiparous women.;
 %let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
@@ -158,8 +158,8 @@ run;
 %let tabellvar1=&tema_navn;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="Klipping" &tabellvar2="Fødsler";
-%let xlabel=Antall pr. 1 000 fødsler, Robsongruppe 3.;
+%let labeltabell=&tabellvar1="Episiotomy" &tabellvar2="Births";
+%let xlabel=Number per 1,000 births in Robson group 3.;
 %let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
@@ -211,7 +211,7 @@ run;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="&tema" &tabellvar2="førstegangsfødsler";
-%let xlabel=Antall pr. 1 000  førstegangsfødsler.;
+%let xlabel=Number per 1,000 primiparous women.;
 %let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
