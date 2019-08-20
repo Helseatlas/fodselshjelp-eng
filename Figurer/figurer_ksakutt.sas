@@ -21,7 +21,7 @@
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Keisersnitt" &tabellvar2="Fødsler";
 %let xlabel=Antall pr. 1 000 førstegangsfødende.;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
 %let just=Ijust;
@@ -29,9 +29,9 @@
 %let tittel=&tema_navn &just;
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=png);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=png);
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
 
 /*** Lager datasett for Instant Atlas *****/
 
@@ -66,7 +66,7 @@ run;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Keisersnitt" &tabellvar2="Fødsler";
 %let xlabel=Antall pr. 1 000 flergangsfødende.;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
 
@@ -76,9 +76,9 @@ run;
 
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=png);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=png);
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
 
 /*** Lager datasett for Instant Atlas *****/
 
@@ -122,7 +122,7 @@ run;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Keisersnitt" &tabellvar2="Fødsler" ;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;*values=(0 to 300 by 50); * if run with no aarsvar, then the scale can be 0 to 250;
 
 %let mappe=&mappe_png;
@@ -154,7 +154,7 @@ run;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Keisersnitt" &tabellvar2="Fødsler" ;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;*values=(0 to 300 by 50); * if run with no aarsvar, then the scale can be 0 to 250;
 
 %let mappe=&mappe_png;
@@ -205,7 +205,7 @@ run;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Akutte keisersnitt" &tabellvar2="Fødsler";
 %let xlabel=Antall pr. 1 000 fødsler, Robsongruppe 1.;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
 
@@ -215,9 +215,9 @@ run;
 
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=png);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=png);
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
 
 /*** Lager datasett for Instant Atlas *****/
 
@@ -250,7 +250,7 @@ run;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="&tema" &tabellvar2="Alle førstegangsfødende";
 %let xlabel=&tema., pr. 1 000 førstegangsfødende igangsatt.;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
 %let just=Ijust;
@@ -258,9 +258,9 @@ run;
 %let tittel=&tema_navn &just;
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=png);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=png);
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
 
 /*****************/
 /*** ROBSON  3 ***/
@@ -278,7 +278,7 @@ run;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Akutte keisersnitt" &tabellvar2="Fødsler";
 %let xlabel=Antall pr. 1 000 lavrisikofødsler hos flergangsfødende.;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
 
@@ -288,9 +288,9 @@ run;
 
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=png);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=png);
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
 
 /*****************/
 /*** ROBSON  4 ***/
@@ -307,7 +307,7 @@ run;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="&tema" &tabellvar2="Alle flergangsfødende";
 %let xlabel=&tema., pr. 1 000 flergangsfødende igangsatt.;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
 %let just=Ijust;
@@ -315,9 +315,9 @@ run;
 %let tittel=&tema_navn &just;
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=png);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=png);
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
 
 
 /*****************/
@@ -335,7 +335,7 @@ run;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Akutte keisersnitt" &tabellvar2="Fødsler";
 %let xlabel=Antall pr. 1 000 førstegangsfødende.;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
 %let just=Ijust;
@@ -343,9 +343,9 @@ run;
 %let tittel=&tema_navn &just;
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=png);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=png);
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
 
 
 /*****************/
@@ -363,7 +363,7 @@ run;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Akutte keisersnitt" &tabellvar2="Fødsler";
 %let xlabel=Antall pr. 1 000 flergangsfødende.;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
 %let just=Ijust;
@@ -371,16 +371,16 @@ run;
 %let tittel=&tema_navn &just;
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=png);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=png);
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
 
 /*
 %let just=Just;
 %let fignavn=&just;
 %let tittel=&tema_navn &just;
 
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017);
 
 
 
@@ -388,7 +388,7 @@ run;
 %let fignavn=&just;
 %let tittel=&tema_navn &just;
 
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017);
 */
 
 %let mappe_png=Figurer\png;

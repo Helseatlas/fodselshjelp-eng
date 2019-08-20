@@ -86,6 +86,7 @@ else if 34<=alder then alder_ny=3;
 
 
 /******  JUSTERING  ********************************************************************/
+%let just = 1;
 %Let aldjust=Ermann=0; /*Aktiveres KUN dersom KUN aldersjustering*/
 %Let standard = Aldersstandardiserte; /*Brukes til å lage figur og tabell-overskrifter */
 %Let kjonn=(0); /*Dersom både menn og kvinner (0,1), dersom kun menn (1), dersom kun kvinner (0)*/

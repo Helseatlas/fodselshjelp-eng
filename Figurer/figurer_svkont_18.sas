@@ -19,14 +19,14 @@
 %let tabellvar2=andel_2_1;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Kontakter" &tabellvar2="Andel priv";
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLpct8.1;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 NLpct8.1;
 %let skala=values=(0,1,2,3,4,5,6);
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema._totpriv_bohf);
+%ratefig(sprak=en, datasett=&tema._totpriv_bohf);
 
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema._totpriv_bohf, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema._totpriv_bohf, bildeformat=pdf);
 
 /*ENKEL RATEFIGUR, ALLE KONSULTASJONER MED ANDEL UTVALGTE KODER*/
 /*
@@ -49,14 +49,14 @@
 %let tabellvar2=andel_2_1;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Kontakter" &tabellvar2="Utv. koder";
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLpct8.1;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 NLpct8.1;
 %let skala=values=(0,1,2,3,4,5,6,7,8);
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema._koder_bohf);
+%ratefig(sprak=en, datasett=&tema._koder_bohf);
 
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema._koder_bohf, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema._koder_bohf, bildeformat=pdf);
 */
 /*ENKEL RATEFIGUR, KONS MED UTV KODER, MED ANDEL UTVALGTE KODER*/
 /*
@@ -79,14 +79,14 @@
 %let tabellvar2=andel_1_2;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Kontakter" &tabellvar2="Utv. koder";
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLpct8.1;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 NLpct8.1;
 %let skala=values=(0,1,2,3,4,5,6,7,8);
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema._koder2_bohf);
+%ratefig(sprak=en, datasett=&tema._koder2_bohf);
 
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema._koder2_bohf, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema._koder2_bohf, bildeformat=pdf);
 
 */
 /*SAMMENSATT FIGUR, NPR OFF PRIV*/
@@ -110,7 +110,7 @@
 %let tabellvar2=antall_2;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Off. sykehus" &tabellvar2="Avt. Spes" ;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=values=(0,1,2,3,4,5,6);
 
 %let mappe=&mappe_png;
@@ -162,7 +162,7 @@ run;
 %let tabellvar2=antall_3;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="JM/FL" &tabellvar2="SH" ;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=values=(0,2,4,6,8,10,12,14);
 
 %let mappe=&mappe_png;
@@ -209,7 +209,7 @@ run;
 %let tabellvar2=antall_2;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="JM" &tabellvar2="FL/LV" ;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=values=(0,1,2,3,4,5,6,7,8,9);
 
 %let mappe=&mappe_png;
@@ -239,14 +239,14 @@ run;
 %let tabellvar2=innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="En kontakt" &tabellvar2="Fødende";
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
 %let mappe=&mappe_png;
-%ratefig(datasett=svkont_en_ijust_bohf);
+%ratefig(sprak=en, datasett=svkont_en_ijust_bohf);
 
 %let mappe=&mappe_pdf;
-%ratefig(datasett=svkont_en_ijust_bohf, bildeformat=pdf);
+%ratefig(sprak=en, datasett=svkont_en_ijust_bohf, bildeformat=pdf);
 
 /*ENKEL RATEFIGUR, Fødende med emer enn 5 kontakter*/
 
@@ -263,14 +263,14 @@ run;
 %let tabellvar2=innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="6 kont. eller mer" &tabellvar2="Fødende";
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
 %let mappe=&mappe_png;
-%ratefig(datasett=svkont_mer_fem_ijust_bohf);
+%ratefig(sprak=en, datasett=svkont_mer_fem_ijust_bohf);
 
 %let mappe=&mappe_pdf;
-%ratefig(datasett=svkont_mer_fem_ijust_bohf, bildeformat=pdf);
+%ratefig(sprak=en, datasett=svkont_mer_fem_ijust_bohf, bildeformat=pdf);
 
 /*** Lager datasett for Instant Atlas *****/
 

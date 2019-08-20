@@ -67,7 +67,7 @@ run;
 %let tabellvar3=tot_kompl;
 %let tabellvariable= &tabellvar1 &tabellvar2 &tabellvar3;
 %let labeltabell=&tabellvar1="Total" &tabellvar2="Total - kompl." &tabellvar3="Kompl." ;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0 &tabellvar3 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0 &tabellvar3 comma8.0;
 %let skala=;*values=(0 to 18 by 3);
 
 proc sort data=inngr_kompl_bohf;
@@ -158,7 +158,7 @@ run;
 *%let tabellvar2=antall_2;
 %let tabellvariable= &tabellvar1;* &tabellvar2;
 %let labeltabell=&tabellvar1="tot. rate";* &tabellvar2="Hyst." ;
-%let formattabell=&tabellvar1 NLnum8.0;* &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0;* &tabellvar2 comma8.0;
 %let skala=;*values=(0 to 18 by 3);
 
 %let mappe=&mappe_png;

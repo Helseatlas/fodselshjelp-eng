@@ -53,14 +53,14 @@ run;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Kompl." &tabellvar2="Fødsler";
 %let xlabel=Antall pr. 1 000 fødsler, Robsongruppe 1.;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
 %let mappe=&mappe_png;
-%ratefig(datasett=kompl_r1_bohf2);
+%ratefig(sprak=en, datasett=kompl_r1_bohf2);
 
 %let mappe=&mappe_pdf;
-%ratefig(datasett=kompl_r1_bohf2, bildeformat=pdf);
+%ratefig(sprak=en, datasett=kompl_r1_bohf2, bildeformat=pdf);
 
 /*****************/
 /*** ROBSON 3 ***/
@@ -110,14 +110,14 @@ run;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Kompl." &tabellvar2="Fødsler";
 %let xlabel=Antall pr. 1 000 fødsler, Robsongruppe 3.;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
 %let mappe=&mappe_png;
-%ratefig(datasett=kompl_r3_bohf2);
+%ratefig(sprak=en, datasett=kompl_r3_bohf2);
 
 %let mappe=&mappe_pdf;
-%ratefig(datasett=kompl_r3_bohf2, bildeformat=pdf);
+%ratefig(sprak=en, datasett=kompl_r3_bohf2, bildeformat=pdf);
 
 
 

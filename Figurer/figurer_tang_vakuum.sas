@@ -22,14 +22,14 @@
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Instr. fødsel" &tabellvar2="Fødsler";
 %let xlabel=Antall pr. 1 000  førstegangsfødende som fødte vaginalt.;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema_navn._IJUST_bohf);
+%ratefig(sprak=en, datasett=&tema_navn._IJUST_bohf);
 
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema_navn._IJUST_bohf, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema_navn._IJUST_bohf, bildeformat=pdf);
 
 /*** Lager datasett for Instant Atlas *****/
 
@@ -64,14 +64,14 @@ run;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Instr. fødsel" &tabellvar2="Fødsler";
 %let xlabel=Antall pr. 1 000  flergangsfødende som fødte vaginalt.;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema_navn._IJUST_bohf);
+%ratefig(sprak=en, datasett=&tema_navn._IJUST_bohf);
 
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema_navn._IJUST_bohf, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema_navn._IJUST_bohf, bildeformat=pdf);
 
 /*** Lager datasett for Instant Atlas *****/
 
@@ -109,14 +109,14 @@ run;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Instr. fødsel" &tabellvar2="Fødsler";
 %let xlabel=Antall pr. 1 000 fødsler, Robsongruppe 1.;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema_navn._IJUST_bohf, bildeformat=png);
+%ratefig(sprak=en, datasett=&tema_navn._IJUST_bohf, bildeformat=png);
 
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema_navn._IJUST_bohf, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema_navn._IJUST_bohf, bildeformat=pdf);
 
 /*** Lager datasett for Instant Atlas *****/
 
@@ -151,14 +151,14 @@ run;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="&tema" &tabellvar2="vag førstegangsfødende";
 %let xlabel=Antall pr. 1 000  førstegangsfødende.;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema_navn._IJUST_bohf, bildeformat=png);
+%ratefig(sprak=en, datasett=&tema_navn._IJUST_bohf, bildeformat=png);
 
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema_navn._IJUST_bohf, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema_navn._IJUST_bohf, bildeformat=pdf);
 
 /*** ROBSON 3 ***/
 /*****************/
@@ -176,14 +176,14 @@ run;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Instr. fødsel" &tabellvar2="Fødsler";
 %let xlabel=Antall pr. 1 000 fødsler, Robsongruppe 3.;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema_navn._IJUST_bohf, bildeformat=png);
+%ratefig(sprak=en, datasett=&tema_navn._IJUST_bohf, bildeformat=png);
 
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema_navn._IJUST_bohf, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema_navn._IJUST_bohf, bildeformat=pdf);
 
 /*** Lager datasett for Instant Atlas *****/
 
@@ -218,14 +218,14 @@ run;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="&tema" &tabellvar2="vag flergangsfødende";
 %let xlabel=Antall pr. 1 000  flergangsfødende.;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema_navn._IJUST_bohf, bildeformat=png);
+%ratefig(sprak=en, datasett=&tema_navn._IJUST_bohf, bildeformat=png);
 
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema_navn._IJUST_bohf, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema_navn._IJUST_bohf, bildeformat=pdf);
 
 /*****************/
 /*** ROBSON 9, par0 ***/
@@ -244,14 +244,14 @@ run;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="&tema" &tabellvar2="førstegangsfødende";
 %let xlabel=Antall pr. 1 000  førstegangsfødende.;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema_navn._IJUST_bohf, bildeformat=png);
+%ratefig(sprak=en, datasett=&tema_navn._IJUST_bohf, bildeformat=png);
 
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema_navn._IJUST_bohf, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema_navn._IJUST_bohf, bildeformat=pdf);
 
 /*****************/
 /*** ROBSON 9, par1 ***/
@@ -270,14 +270,14 @@ run;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="&tema" &tabellvar2="flergangsfødende";
 %let xlabel=Antall pr. 1 000  flergangsfødende.;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema_navn._IJUST_bohf, bildeformat=png);
+%ratefig(sprak=en, datasett=&tema_navn._IJUST_bohf, bildeformat=png);
 
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema_navn._IJUST_bohf, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema_navn._IJUST_bohf, bildeformat=pdf);
 
 %let mappe_png=Figurer\png;
 %let mappe_pdf=Figurer\pdf;
@@ -304,7 +304,7 @@ run;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Instr. fødsel" &tabellvar2="Fødsler" ;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;*values=(0 to 18 by 3);
 
 %let mappe=&mappe_png;
@@ -335,7 +335,7 @@ run;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Instr. fødsel" &tabellvar2="Fødsler" ;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;*values=(0 to 18 by 3);
 
 %let mappe=&mappe_png;

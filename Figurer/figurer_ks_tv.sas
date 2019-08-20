@@ -25,7 +25,7 @@
 %let tabellvar2=antall_2;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Akutt KS" &tabellvar2="Instr." ;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;*values=(0 to 18 by 3);
 
 %let mappe=&mappe_png;
@@ -56,7 +56,7 @@
 %let tabellvar2=antall_2;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Akutt KS" &tabellvar2="Instr." ;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;*values=(0 to 18 by 3);
 
 %let mappe=&mappe_png;

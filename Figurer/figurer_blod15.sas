@@ -24,7 +24,7 @@
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Blødning" &tabellvar2="Fødsler";
 %let xlabel=Antall pr. 1 000 førstegangsfødende som fødte vaginalt.;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;*values=(0 to 60 by 10);
 
 %let just=Ijust;
@@ -32,9 +32,9 @@
 %let tittel=&tema_navn &just;
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=png);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=png);
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
 
 
 
@@ -54,7 +54,7 @@
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Blødning" &tabellvar2="Fødsler";
 %let xlabel=Antall pr. 1 000 flergangsfødende som fødte vaginalt.;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;*values=(0 to 60 by 10);
 
 
@@ -64,9 +64,9 @@
 
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=png);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=png);
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
 
 
 
@@ -93,7 +93,7 @@
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1=">1500 ml" &tabellvar2="Fødsler";
 %let xlabel=Antall pr. 1 000 førstegangsfødende med keisersnitt.;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
 %let just=Ijust;
@@ -101,9 +101,9 @@
 %let tittel=&tema_navn &just;
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=png);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=png);
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
 
 
 
@@ -123,7 +123,7 @@
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1=">1500 ml" &tabellvar2="Fødsler";
 %let xlabel=Antall pr. 1 000 flergangsfødende med keisersnitt.;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
 
@@ -133,9 +133,9 @@
 
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=png);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=png);
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
 
 
 %let mappe_png=Figurer\png\ROBSON;
@@ -160,7 +160,7 @@
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="&tema" &tabellvar2="vaginale førstegangsfødsler";
 %let xlabel=Antall blødning 1500ml+ pr. 1 000 vaginale førstegangsfødsler spontan;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
 
@@ -170,9 +170,9 @@
 
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=png);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=png);
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
 
 /*****************/
 /*** ROBSON  2 ***/
@@ -189,7 +189,7 @@
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="&tema" &tabellvar2="vaginale førstegangsfødsler";
 %let xlabel=Antall blødning 1500ml+ pr. 1 000 vaginale førstegangsfødsler igangsatt;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
 %let just=Ijust;
@@ -197,9 +197,9 @@
 %let tittel=&tema_navn &just;
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=png);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=png);
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
 
 /*****************/
 /*** ROBSON  3 ***/
@@ -217,7 +217,7 @@
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="&tema" &tabellvar2="vaginale flergangsfødsler";
 %let xlabel=Antall blødning 1500ml+ pr. 1 000 vaginale flergangsfødsler spontan;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
 
@@ -227,9 +227,9 @@
 
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=png);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=png);
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
 
 /*****************/
 /*** ROBSON  4 ***/
@@ -246,7 +246,7 @@
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="&tema" &tabellvar2="vaginale flergangsfødsler";
 %let xlabel=Antall blødning 1500ml+ pr. 1 000 vaginale flergangsfødsler igangsatt;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
 %let just=Ijust;
@@ -254,9 +254,9 @@
 %let tittel=&tema_navn &just;
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=png);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=png);
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
 
 
 /*
@@ -264,7 +264,7 @@
 %let fignavn=&just;
 %let tittel=&tema_navn &just;
 
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017);
 
 
 
@@ -272,7 +272,7 @@
 %let fignavn=&just;
 %let tittel=&tema_navn &just;
 
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017);
 */
 
 %let mappe_png=Figurer\png;

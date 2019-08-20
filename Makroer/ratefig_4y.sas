@@ -33,11 +33,11 @@ INPUT FOR HVER FIGUR:
 %let tabellvar3=antall_3_1;
 %let tabellvariable= &tabellvar1 &tabellvar2 &tabellvar3;
 %let labeltabell=&tabellvar1="Personer" &tabellvar2="Konsult. per person for kols" &tabellvar3="Konsult. per person totalt";
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.1 &tabellvar3 NLnum8.1;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.1 &tabellvar3 comma8.1;
 %let skala=;
 
 
-%ratefig(datasett=Personer_&tema);
+%ratefig(sprak=en, datasett=Personer_&tema);
 */
 
 

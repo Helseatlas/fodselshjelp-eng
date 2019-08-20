@@ -27,9 +27,9 @@
 %Let innbyggerfil=FH_innb_&par_rob.&grp.;
 
 
-%let RV_variabelnavn= num_&agg_var; /*navn pÃ¥ ratevariabel i det aggregerte datasettet*/
-%Let ratevariabel = &tema; /*Brukes til Ã¥ lage "pene" overskrifter*/
-%Let forbruksmal = &tema_navn; /*Brukes til Ã¥ lage tabell-overskrift i Ã…rsvarfig, gir ogsÃ¥ navn til 'ut'-datasett*/
+%let RV_variabelnavn= num_&agg_var; /*navn på ratevariabel i det aggregerte datasettet*/
+%Let ratevariabel = &tema; /*Brukes til å lage "pene" overskrifter*/
+%Let forbruksmal = &tema_navn; /*Brukes til å lage tabell-overskrift i Årsvarfig, gir også navn til 'ut'-datasett*/
 
 %utvalgx;
 %omraadeNorge;
@@ -39,7 +39,7 @@ proc datasets nolist;
 delete RV: Norge: figur: Andel Alder: Bo: HN: Kom: Fylke: VK: bydel: snudd ;
 run;
 
-%forholdstall(ds=&tema_navn._IJUST_BOHF, tab=1);
+%forholdstall(ds=&tema_navn._IJUST_BOHF, tab=0);
 %forholdstall(ds=&tema_navn._UJUST_BOHF, tab=0);
 %forholdstall(ds=&tema_navn._JUST_BOHF,  tab=0);
 
@@ -60,9 +60,9 @@ run;
 %Let innbyggerfil=FH_innb_&par_rob.&grp.;
 
 
-%let RV_variabelnavn= num_&agg_var; /*navn pÃ¥ ratevariabel i det aggregerte datasettet*/
-%Let ratevariabel = &tema; /*Brukes til Ã¥ lage "pene" overskrifter*/
-%Let forbruksmal = &tema_navn; /*Brukes til Ã¥ lage tabell-overskrift i Ã…rsvarfig, gir ogsÃ¥ navn til 'ut'-datasett*/
+%let RV_variabelnavn= num_&agg_var; /*navn på ratevariabel i det aggregerte datasettet*/
+%Let ratevariabel = &tema; /*Brukes til å lage "pene" overskrifter*/
+%Let forbruksmal = &tema_navn; /*Brukes til å lage tabell-overskrift i Årsvarfig, gir også navn til 'ut'-datasett*/
 
 %utvalgx;
 %omraadeNorge;
@@ -72,6 +72,6 @@ proc datasets nolist;
 delete RV: Norge: figur: Andel Alder: Bo: HN: Kom: Fylke: VK: bydel: snudd ;
 run;
 
-%forholdstall(ds=&tema_navn._IJUST_BOHF, tab=1);
+%forholdstall(ds=&tema_navn._IJUST_BOHF, tab=0);
 %forholdstall(ds=&tema_navn._UJUST_BOHF, tab=0);
 %forholdstall(ds=&tema_navn._JUST_BOHF,  tab=0);

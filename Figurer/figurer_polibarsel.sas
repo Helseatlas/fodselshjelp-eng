@@ -22,14 +22,14 @@
 %let tabellvar2=andel_3_1;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Antall på polikl." &tabellvar2="Andel uke 1";
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLpct8.1;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 NLpct8.1;
 %let skala=;
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema._bohf);
+%ratefig(sprak=en, datasett=&tema._bohf);
 
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema._bohf, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema._bohf, bildeformat=pdf);
 
 /*** Lager datasett for Instant Atlas *****/
 
@@ -64,14 +64,14 @@ run;
 *%let tabellvar2=andel_3_1;
 %let tabellvariable= &tabellvar1;* &tabellvar2;
 %let labeltabell=&tabellvar1="Innlagte";* &tabellvar2="Andel uke 1";
-%let formattabell=&tabellvar1 NLnum8.0;* &tabellvar2 NLpct8.1;
+%let formattabell=&tabellvar1 comma8.0;* &tabellvar2 NLpct8.1;
 %let skala=;
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema._tu_ijust_bohf);
+%ratefig(sprak=en, datasett=&tema._tu_ijust_bohf);
 
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema._tu_ijust_bohf, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema._tu_ijust_bohf, bildeformat=pdf);
 
 /*ENKEL RATEFIGUR, DØGNOPPHOLD*/
 
@@ -89,14 +89,14 @@ run;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Reinnleggelser" &tabellvar2="Fødsler";
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema._tot_ijust_bohf);
+%ratefig(sprak=en, datasett=&tema._tot_ijust_bohf);
 
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema._tot_ijust_bohf, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema._tot_ijust_bohf, bildeformat=pdf);
 
 /*** Lager datasett for Instant Atlas *****/
 
@@ -138,14 +138,14 @@ run;
 %let tabellvar2=andel_3_1;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Nyfødte på polikl." &tabellvar2="Andel uke 1";
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLpct8.1;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 NLpct8.1;
 %let skala=;
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema._bohf);
+%ratefig(sprak=en, datasett=&tema._bohf);
 
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema._bohf, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema._bohf, bildeformat=pdf);
 
 /*** Lager datasett for Instant Atlas *****/
 
@@ -184,14 +184,14 @@ run;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Reinnleggelser" &tabellvar2="Nyfødte";
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema._dogn_bohf);
+%ratefig(sprak=en, datasett=&tema._dogn_bohf);
 
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema._dogn_bohf, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema._dogn_bohf, bildeformat=pdf);
 
 /*** Lager datasett for Instant Atlas *****/
 
@@ -232,7 +232,7 @@ run;
 %let tabellvar3=innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Alle på polikl." &tabellvar2="Ila. første 7 d.";
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
 %let mappe=&mappe_png;
@@ -269,7 +269,7 @@ run;
 %let tabellvar2=antall_2;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="FL/LV" &tabellvar2="SH" ;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
 %let mappe=&mappe_png;
@@ -319,7 +319,7 @@ run;
 %let tabellvar2=antall_2;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="FL/LV" &tabellvar2="SH" ;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
 %let mappe=&mappe_png;
@@ -372,7 +372,7 @@ run;
 %let tabellvar2=k_pr_prs;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Kontakter" &tabellvar2="Kont. pr. pas." ;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.1;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.1;
 %let skala=;
 
 %let mappe=&mappe_png;
@@ -417,12 +417,12 @@ run;
 %let tabellvar2=k_pr_prs;
 %let tabellvariable= &tabellvar1;* &tabellvar2;
 %let labeltabell=&tabellvar1="Antall hos fastlege/legevakt";* &tabellvar2="Kont. pr. pas." ;
-%let formattabell=&tabellvar1 NLnum8.0;* &tabellvar2 NLnum8.1;
+%let formattabell=&tabellvar1 comma8.0;* &tabellvar2 comma8.1;
 %let skala=;
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema._KUHR_p_bohf2);
+%ratefig(sprak=en, datasett=&tema._KUHR_p_bohf2);
 
 
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema._KUHR_p_bohf2, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema._KUHR_p_bohf2, bildeformat=pdf);

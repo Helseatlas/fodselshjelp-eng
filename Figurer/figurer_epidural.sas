@@ -27,7 +27,7 @@
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Epidural" &tabellvar2="Fødsler";
 %let xlabel=Antall pr. 1 000 førstegangsfødende som fødte vaginalt.;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;*values=(0 to 700 by 100);
 
 %let just=Ijust;
@@ -35,9 +35,9 @@
 %let tittel=&tema_navn &just;
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=png);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=png);
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
 
 /*** Lager datasett for Instant Atlas *****/
 
@@ -72,7 +72,7 @@ run;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Epidural" &tabellvar2="Fødsler";
 %let xlabel=Antall pr. 1 000 flergangsfødende som fødte vaginalt.;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;*values=(0 to 700 by 100);
 
 
@@ -82,9 +82,9 @@ run;
 
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=png);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=png);
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
 
 
 /*** Lager datasett for Instant Atlas *****/
@@ -127,7 +127,7 @@ run;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Epidural" &tabellvar2="Fødsler";
 %let xlabel=Antall pr. 1 000 førstegangsfødende med akutt keisersnitt.;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
 %let just=Ijust;
@@ -135,9 +135,9 @@ run;
 %let tittel=&tema_navn &just;
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=png);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=png);
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
 
 
 
@@ -157,7 +157,7 @@ run;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Epidural" &tabellvar2="Fødsler";
 %let xlabel=Antall pr. 1 000 flergangsfødende med akutt keisersnitt.;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
 
@@ -167,9 +167,9 @@ run;
 
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=png);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=png);
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema_navn._&just._bohf, aar1=2015, aar2=2016, aar3=2017, bildeformat=pdf);
 
 
 
@@ -199,14 +199,14 @@ run;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Epidural" &tabellvar2="Fødsler";
 %let xlabel=Antall pr. 1 000 fødsler, Robsongruppe 1.;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema_navn._IJUST_bohf, bildeformat=png);
+%ratefig(sprak=en, datasett=&tema_navn._IJUST_bohf, bildeformat=png);
 
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema_navn._IJUST_bohf, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema_navn._IJUST_bohf, bildeformat=pdf);
 
 /*****************/
 /*** ROBSON 2 ***/
@@ -225,14 +225,14 @@ run;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Epidural" &tabellvar2="Fødsler";
 %let xlabel=Antall pr. 1 000  førstegangsfødsler.;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema_navn._IJUST_bohf, bildeformat=png);
+%ratefig(sprak=en, datasett=&tema_navn._IJUST_bohf, bildeformat=png);
 
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema_navn._IJUST_bohf, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema_navn._IJUST_bohf, bildeformat=pdf);
 
 /*** ROBSON 3 ***/
 /*****************/
@@ -250,14 +250,14 @@ run;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Epidural" &tabellvar2="Fødsler";
 %let xlabel=Antall pr. 1 000 fødsler, Robsongruppe 3.;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema_navn._IJUST_bohf, bildeformat=png);
+%ratefig(sprak=en, datasett=&tema_navn._IJUST_bohf, bildeformat=png);
 
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema_navn._IJUST_bohf, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema_navn._IJUST_bohf, bildeformat=pdf);
 
 /*****************/
 /*** ROBSON 4 ***/
@@ -276,14 +276,14 @@ run;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="&tema" &tabellvar2="vag flergangsfødsler";
 %let xlabel=Antall pr. 1 000  flergangsfødsler.;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema_navn._IJUST_bohf, bildeformat=png);
+%ratefig(sprak=en, datasett=&tema_navn._IJUST_bohf, bildeformat=png);
 
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema_navn._IJUST_bohf, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema_navn._IJUST_bohf, bildeformat=pdf);
 
 /*****************/
 /*** ROBSON 9, par0 ***/
@@ -302,14 +302,14 @@ run;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Epidural" &tabellvar2="Fødsler";
 %let xlabel=Antall pr. 1 000  førstegangsfødsler.;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema_navn._IJUST_bohf, bildeformat=png);
+%ratefig(sprak=en, datasett=&tema_navn._IJUST_bohf, bildeformat=png);
 
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema_navn._IJUST_bohf, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema_navn._IJUST_bohf, bildeformat=pdf);
 
 /*****************/
 /*** ROBSON 9, par1 ***/
@@ -328,14 +328,14 @@ run;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Epidural" &tabellvar2="Fødsler";
 %let xlabel=Antall pr. 1 000  flergangsfødsler.;
-%let formattabell=&tabellvar1 NLnum8.0 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema_navn._IJUST_bohf, bildeformat=png);
+%ratefig(sprak=en, datasett=&tema_navn._IJUST_bohf, bildeformat=png);
 
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema_navn._IJUST_bohf, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema_navn._IJUST_bohf, bildeformat=pdf);
 
 %let mappe_png=Figurer\png;
 %let mappe_pdf=Figurer\pdf;

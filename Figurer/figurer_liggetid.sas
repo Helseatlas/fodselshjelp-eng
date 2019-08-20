@@ -27,14 +27,14 @@
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Liggedøgn" &tabellvar2="Fødsler";
 %let xlabel=Antall liggedøgn pr. fødsel.;
-%let formattabell=&tabellvar1 NLnum8.1 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.1 &tabellvar2 comma8.0;
 %let skala=;
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema_navn.&nevner._IJUST_BOHF);
+%ratefig(sprak=en, datasett=&tema_navn.&nevner._IJUST_BOHF);
 
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema_navn.&nevner._IJUST_BOHF, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema_navn.&nevner._IJUST_BOHF, bildeformat=pdf);
 
 /*** Lager datasett for Instant Atlas *****/
 
@@ -69,15 +69,15 @@ run;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Liggedøgn" &tabellvar2="Fødsler";
 %let xlabel=Antall liggedøgn pr. fødsel.;
-%let formattabell=&tabellvar1 NLnum8.1 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.1 &tabellvar2 comma8.0;
 %let skala=;
 
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema_navn.&nevner._IJUST_BOHF);
+%ratefig(sprak=en, datasett=&tema_navn.&nevner._IJUST_BOHF);
 
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema_navn.&nevner._IJUST_BOHF, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema_navn.&nevner._IJUST_BOHF, bildeformat=pdf);
 
 /*** Lager datasett for Instant Atlas *****/
 
@@ -121,14 +121,14 @@ run;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Liggedøgn" &tabellvar2="Fødsler";
 %let xlabel=Antall liggedøgn pr. fødsel.;
-%let formattabell=&tabellvar1 NLnum8.1 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.1 &tabellvar2 comma8.0;
 %let skala=;
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema_navn.&nevner._IJUST_BOHF);
+%ratefig(sprak=en, datasett=&tema_navn.&nevner._IJUST_BOHF);
 
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema_navn.&nevner._IJUST_BOHF, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema_navn.&nevner._IJUST_BOHF, bildeformat=pdf);
 
 /*** Lager datasett for Instant Atlas *****/
 
@@ -163,15 +163,15 @@ run;
 %let tabellvariable= &tabellvar1 &tabellvar2;
 %let labeltabell=&tabellvar1="Liggedøgn" &tabellvar2="Fødsler";
 %let xlabel=Antall liggedøgn pr. fødsel.;
-%let formattabell=&tabellvar1 NLnum8.1 &tabellvar2 NLnum8.0;
+%let formattabell=&tabellvar1 comma8.1 &tabellvar2 comma8.0;
 %let skala=;
 
 
 %let mappe=&mappe_png;
-%ratefig(datasett=&tema_navn.&nevner._IJUST_BOHF);
+%ratefig(sprak=en, datasett=&tema_navn.&nevner._IJUST_BOHF);
 
 %let mappe=&mappe_pdf;
-%ratefig(datasett=&tema_navn.&nevner._IJUST_BOHF, bildeformat=pdf);
+%ratefig(sprak=en, datasett=&tema_navn.&nevner._IJUST_BOHF, bildeformat=pdf);
 
 /*** Lager datasett for Instant Atlas *****/
 
