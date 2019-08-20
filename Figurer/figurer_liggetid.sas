@@ -25,8 +25,8 @@
 %let tabellvar1=RateSnitt;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="Liggedøgn" &tabellvar2="Fødsler";
-%let xlabel=Antall liggedøgn pr. fødsel.;
+%let labeltabell=&tabellvar1="Bed days" &tabellvar2="Births";
+%let xlabel=Number of bed days per birth.;
 %let formattabell=&tabellvar1 comma8.1 &tabellvar2 comma8.0;
 %let skala=;
 
@@ -67,8 +67,8 @@ run;
 %let tabellvar1=RateSnitt;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="Liggedøgn" &tabellvar2="Fødsler";
-%let xlabel=Antall liggedøgn pr. fødsel.;
+%let labeltabell=&tabellvar1="Bed days" &tabellvar2="Births";
+%let xlabel=Number of bed days per birth.;
 %let formattabell=&tabellvar1 comma8.1 &tabellvar2 comma8.0;
 %let skala=;
 
@@ -119,8 +119,8 @@ run;
 %let tabellvar1=RateSnitt;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="Liggedøgn" &tabellvar2="Fødsler";
-%let xlabel=Antall liggedøgn pr. fødsel.;
+%let labeltabell=&tabellvar1="Bed days" &tabellvar2="Births";
+%let xlabel=Number of bed days per birth.;
 %let formattabell=&tabellvar1 comma8.1 &tabellvar2 comma8.0;
 %let skala=;
 
@@ -161,8 +161,8 @@ run;
 %let tabellvar1=RateSnitt;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="Liggedøgn" &tabellvar2="Fødsler";
-%let xlabel=Antall liggedøgn pr. fødsel.;
+%let labeltabell=&tabellvar1="Bed days" &tabellvar2="Births";
+%let xlabel=Number of bed days per birth.;
 %let formattabell=&tabellvar1 comma8.1 &tabellvar2 comma8.0;
 %let skala=;
 
