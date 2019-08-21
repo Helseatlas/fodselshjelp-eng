@@ -2,8 +2,8 @@
 %let tema=kompl_samlet;
 
 
-%let mappe_png=Figurer\png\ROBSON;
-%let mappe_pdf=Figurer\pdf\ROBSON;
+%let mappe_png=Figurer_eng\png\ROBSON;
+%let mappe_pdf=Figurer_eng\pdf\ROBSON;
 
 /*****************/
 /*** ROBSON 1 ***/
@@ -122,5 +122,5 @@ run;
 
 
 
-%let mappe_png=Figurer\png;
-%let mappe_pdf=Figurer\pdf;
+%let mappe_png=Figurer_eng\png;
+%let mappe_pdf=Figurer_eng\pdf;

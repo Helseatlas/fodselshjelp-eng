@@ -89,8 +89,8 @@ Tom_rad = "";
 Tom_rute = "";
 run;
 
-%let mappe_png=Figurer\png\ROBSON;
-%let mappe_pdf=Figurer\pdf\ROBSON;
+%let mappe_png=Figurer_eng\png\ROBSON;
+%let mappe_pdf=Figurer_eng\pdf\ROBSON;
 
 /*****************/
 /*** ROBSON 1 ***/
@@ -247,5 +247,5 @@ run;
 %let mappe=&mappe_pdf;
 %ratefig(sprak=en, datasett=&tema_navn._IJUST_bohf, bildeformat=pdf);
 
-%let mappe_png=Figurer\png;
-%let mappe_pdf=Figurer\pdf;
+%let mappe_png=Figurer_eng\png;
+%let mappe_pdf=Figurer_eng\pdf;
