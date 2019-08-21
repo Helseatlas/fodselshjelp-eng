@@ -19,8 +19,8 @@
 %let tabellvar1=&tema_navn;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="Ukomplisert" &tabellvar2="Fødsler";
-%let xlabel=Antall pr. 1 000 fødsler hos førstegangsfødende.;
+%let labeltabell=&tabellvar1="Uncomplicated" &tabellvar2="Births";
+%let xlabel=Number per 1,000 births to primiparous women.;
 %let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=;
 
@@ -64,8 +64,8 @@ run;
 %let tabellvar1=&tema_navn;
 %let tabellvar2=Innbyggere;
 %let tabellvariable= &tabellvar1 &tabellvar2;
-%let labeltabell=&tabellvar1="Ukomplisert" &tabellvar2="Fødsler";
-%let xlabel=Antall pr. 1 000 fødsler hos flergangsfødende.;
+%let labeltabell=&tabellvar1="Uncomplicated" &tabellvar2="Births";
+%let xlabel=Number per 1,000 births to multiparous women.;
 %let formattabell=&tabellvar1 comma8.0 &tabellvar2 comma8.0;
 %let skala=values=(0 to 900 by 150);
 
